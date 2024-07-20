@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        pixelhugger: ['pixelhugger_font', 'sans-serif'],
+        pixelify: ['PixelifySans-Regular', 'sans-serif'],
+        'pixelify-bold': ['PixelifySans-Bold', 'sans-serif'],
+        'pixelify-medium': ['PixelifySans-Medium', 'sans-serif'],
+        'pixelify-semibold': ['PixelifySans-SemiBold', 'sans-serif'],
+        'pixelify-variable': ['PixelifySans-VariableFont_wght', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

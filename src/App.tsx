@@ -11,7 +11,7 @@ import MeetTheTeam from './Pages/MeetTheTeam';
 import Sponsors from './Pages/Sponsors';
 import NotFound from './Pages/NotFound';
 
-
+import "./App.css"
 
 function App() {
   return (
