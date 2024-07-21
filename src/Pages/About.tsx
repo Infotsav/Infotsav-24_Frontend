@@ -1,11 +1,11 @@
 // import React from 'react'
-
-import Footer from "../Components/Footer"
 import ParticlesBackground from "../Components/ParticlesBackground"
 
 function About() {
   return (
-    <div className="max-w-7xl mx-auto">
+
+    <div className="max-w-7xl mt-[100px] mx-auto">
+
       <div className="absolute -z-10"><ParticlesBackground /></div>
       <h1 className="scroll-m-20 text-[#FEFEFE] text-[16vw] md:text-[9vw] tracking-tight text-center font-pixelify mb-5 md:mb-0">
         About Us

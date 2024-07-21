@@ -1,8 +1,11 @@
 // import React from 'react'
+import ComingSoon from '../Components/ComingSoon'
 
 function Sponsors() {
     return (
-        <div>Sponsors</div>
+        <div>
+            <ComingSoon />
+        </div>
     )
 }
 
