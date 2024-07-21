@@ -1,8 +1,11 @@
 // import React from 'react'
+import ComingSoon from '../Components/ComingSoon'
 
 function Events() {
     return (
-        <div>Events</div>
+        <div>
+            <ComingSoon />
+        </div>
     )
 }
 

@@ -1,4 +1,15 @@
 * {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 350px) {
+    .arrowIcon {
+        display: none;
+    }
 }

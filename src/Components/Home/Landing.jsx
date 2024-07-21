@@ -1,8 +1,8 @@
 import React from 'react';
-import ParticlesBackground from './ParticlesBackground';
+import ParticlesBackground from '../ParticlesBackground';
 import Mountains from '../../assets/far-mountains.png';
 
-function Landing() {
+const Landing = () => {
     return (
         <div className='relative bg-black h-screen w-full overflow-hidden'>
             <ParticlesBackground />
@@ -25,4 +25,4 @@ function Landing() {
     );
 }
 
-export default Landing;
+export default Landing

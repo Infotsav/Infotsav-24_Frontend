@@ -1,8 +1,11 @@
 // import React from 'react'
+import ComingSoon from '../Components/ComingSoon'
 
 function Login() {
     return (
-        <div>Login</div>
+        <div>
+            <ComingSoon />
+        </div>
     )
 }
 

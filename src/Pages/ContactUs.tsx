@@ -1,8 +1,12 @@
 // import React from 'react'
+import ComingSoon from '../Components/ComingSoon'
+
 
 function ContactUs() {
     return (
-        <div>ContactUs</div>
+        <div>
+            <ComingSoon />
+        </div>
     )
 }
 

@@ -1,23 +1,38 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Hamburger from "../assets/hamburger-icon.png";
-import ArrowIcon from "../assets/arrow-icon.png";
+import { ArrowUpRight } from "lucide-react";
 
 function Navbar() {
     const navigate = useNavigate();
+    const location = useLocation();
     const [menuClick, setMenuClick] = useState(false);
+
+    const handleClickOutside = (event: any) => {
+        if (menuClick && !event.target.closest('.menu-container')) {
+            setMenuClick(false);
+        }
+    };
+
+    useEffect(() => {
+        setMenuClick(false);
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [location]);
 
     return (
         <div className="w-full flex flex-col gap-4 justify-center items-center absolute top-0 left-0 pt-[30px]">
             <div
-                className="bg-[#FFFFFF] h-[60px] z-30 w-[80vw] rounded-3xl border-4 border-black flex justify-between items-center px-20px"
+                className="bg-[#FFFFFF] h-[60px] z-30 w-[80vw] rounded-3xl border-4 border-black flex justify-between items-center px-20px menu-container"
                 style={{
                     boxShadow: '1px 1px 0px #ff4910, 2px 2px 0px #ff4910, 3px 3px 0px #ff4910, 4px 4px 0px #ff4910, 5px 5px 0px #ff4910, 6px 6px 0px #ff4910'
                 }}
             >
                 <div
                     onClick={() => navigate('/')}
-                    className="mx-2 flex justify-center items-center gap-3"
+                    className="hidden sm:flex mx-2 justify-center items-center gap-3 cursor-pointer"
                 >
                     <img src="/logo.png" alt="hell" className="h-[35px]" />
                     <h1 className="mr-[20px] font-pixelify font-black text-xl">
@@ -26,20 +41,24 @@ function Navbar() {
                 </div>
 
                 <div>
-                    <button onClick={() => setMenuClick(!menuClick)}>
-                        <img src={Hamburger} alt="" className="h-[25px] pt-1" />
+                    <button
+                        className='ml-[20px]'
+                        onClick={() => setMenuClick(!menuClick)}
+                    >
+                        <img src={Hamburger} alt="" className="mr-[20px] h-[25px] pt-1" />
                     </button>
                 </div>
 
                 <div>
                     <button
-                        onClick={() => navigate('/login')}
+                        onClick={() => navigate('/register')}
                         className="bg-black mx-3 px-4 py-1 text-white font-pixelify rounded-3xl"
                     >
                         Register
                     </button>
                 </div>
             </div>
+
 
             {/* pop-down menu */}
             <div
@@ -56,7 +75,7 @@ function Navbar() {
                         className='rounded-3xl border-4 h-[50px] border-black w-full text-left px-5 flex justify-between items-center'
                     >
                         About
-                        <img src={ArrowIcon} alt="" className="h-6" />
+                        <ArrowUpRight className=" arrowIcon w-7 h-7 ml-1" />
                     </button>
                 </div>
 
@@ -66,7 +85,7 @@ function Navbar() {
                         className='rounded-3xl border-4 h-[50px] border-black w-full text-left px-5 flex justify-between items-center'
                     >
                         Events
-                        <img src={ArrowIcon} alt="" className="h-6" />
+                        <ArrowUpRight className="arrowIcon w-7 h-7 ml-1" />
                     </button>
                 </div>
 
@@ -75,8 +94,8 @@ function Navbar() {
                         onClick={() => navigate('/sponsors')}
                         className='rounded-3xl border-4 h-[50px] border-black w-full text-left px-5 flex justify-between items-center'
                     >
-                        Our Sponsors
-                        <img src={ArrowIcon} alt="" className="h-6" />
+                        Sponsors
+                        <ArrowUpRight className=" w-7 h-7 ml-1" />
                     </button>
                 </div>
 
@@ -86,7 +105,7 @@ function Navbar() {
                         className='rounded-3xl border-4 h-[50px] border-black w-full text-left px-5 flex justify-between items-center'
                     >
                         Contact Us
-                        <img src={ArrowIcon} alt="" className="h-6" />
+                        <ArrowUpRight className="arrowIcon w-7 h-7 ml-1" />
                     </button>
                 </div>
             </div>
