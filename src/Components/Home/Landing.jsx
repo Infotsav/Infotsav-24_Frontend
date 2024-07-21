@@ -1,5 +1,5 @@
 import React from 'react';
-import ParticlesBackground from './ParticlesBackground';
+import ParticlesBackground from '../ParticlesBackground';
 import Mountains from '../../assets/far-mountains.png';
 
 function Landing() {
