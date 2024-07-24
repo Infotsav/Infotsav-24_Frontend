@@ -1,5 +1,5 @@
 // import React from 'react'
-import Lannding from '../Components/Home/Landing'
+import Lannding from '../Components/Home/Landing.tsx'
 
 function Home() {
     return (
