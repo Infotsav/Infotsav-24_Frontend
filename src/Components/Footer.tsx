@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="w-screen bg-black px-5 md:px-10 text-[#ccc] z-50 absolute">
+    <div className="w-screen bg-black px-5 md:px-10 text-[#ccc] z-40 absolute">
       <div className="flex flex-col md:flex-row md:justify-between items-center font-mono my-5 gap-5 md:my-10">
         <div className="flex flex-col self-start">
           <span className="font-bold text-2xl mb-2">
