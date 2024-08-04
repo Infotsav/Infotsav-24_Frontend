@@ -7,7 +7,14 @@
 html {
     overflow-x: hidden;
 }
-
+.bg-grid{
+    background-image: url(../src/assets/bg-grid.png);
+    background-size: cover;
+}
+.bgIntro{
+background-image: url(./assets/IntroBg.png);
+background-size: cover;
+}
 @media screen and (max-width: 350px) {
     .arrowIcon {
         display: none;
