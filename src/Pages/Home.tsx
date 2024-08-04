@@ -1,7 +1,8 @@
 // import React from 'react'
-import Lannding from '../Components/Home/Landing'
 import Intro from '../Components/Home/Intro'
 import PastSponsors from '../Components/Home/PastSponsors'
+import EventCaraousel from '../Components/Home/EventCaraousel.tsx'
+import Lannding from '../Components/Home/Landing.tsx'
 
 function Home() {
     return (
@@ -9,6 +10,7 @@ function Home() {
             <Lannding />
             <Intro/>
             <PastSponsors/>            
+            <EventCaraousel />
         </div>
     )
 }
