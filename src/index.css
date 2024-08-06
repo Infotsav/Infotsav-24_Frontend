@@ -13,6 +13,11 @@
 }
 
 @font-face {
+    font-family: 'seg';
+    src: url('./assets/fonts/SG04.ttf');
+}
+
+@font-face {
     font-family: 'PixelifySans-Medium';
     src: url('/fonts/PixelifySans-Medium.ttf') format('truetype');
     font-weight: 500;
