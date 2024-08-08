@@ -1,12 +1,15 @@
-// import React from 'react'
-import ComingSoon from '../Components/ComingSoon'
+import ParticlesBackground from '../Components/ParticlesBackground';
+import {SponsorsComponent} from '../Components/SponsorsComponent';
+
 
 function Sponsors() {
     return (
-        <div>
-            <ComingSoon />
+        <div className=''>
+            <ParticlesBackground />
+
+            <SponsorsComponent />
         </div>
-    )
+    );
 }
 
-export default Sponsors
+export default Sponsors;
