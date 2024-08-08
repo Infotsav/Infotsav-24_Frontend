@@ -11,6 +11,9 @@ html {
     background-image: url(../src/assets/bg-grid.png);
     background-size: cover;
 }
+.sg-text{
+    font-family: 'seg';
+}
 .bgIntro{
 background-image: url(./assets/IntroBg.png);
 background-size: cover;
