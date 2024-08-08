@@ -12,6 +12,20 @@ import MyFM from "../assets/PastSponsors/MyFM.png";
 import PayTM from "../assets/PastSponsors/PayTM.png";
 import Swiggy from "../assets/PastSponsors/Swiggy.png";
 import TCF from "../assets/PastSponsors/The_College_Fever.png";
+import swiggy from "../assets/SponsorPage/swiggy.png";
+import myfm from "../assets/SponsorPage/myfm.png";
+import inkmonk from "../assets/SponsorPage/inkmonk.png";
+import hackerearth from "../assets/SponsorPage/hackerearth.png";
+import collegefever from "../assets/SponsorPage/collegefever.png";
+import digitalocean from "../assets/SponsorPage/digitalocean.png";
+import db from "../assets/SponsorPage/db.png";
+import ck from "../assets/SponsorPage/ck.png";
+import paytm from "../assets/SponsorPage/paytm.png";
+import festpav from "../assets/SponsorPage/festpav.png";
+import hacksociety from "../assets/SponsorPage/hacksociety.png";
+import knowafest from "../assets/SponsorPage/knowafest.png";
+import wolfram from "../assets/SponsorPage/wolfram.png";
+import codechef from "../assets/SponsorPage/codechef.png";
 
 export const pastSponsors1 = [
     {
@@ -74,3 +88,64 @@ export const pastSponsors2 = [
         src: TCF
     }
 ];
+
+
+export const sponsorPage = [
+    {
+        name: "swiggy",
+        src: swiggy
+    },
+    {
+        name: "myfm",
+        src: myfm
+    },
+    {
+        name: "db",
+        src: db
+    },
+    {
+        name: "digitalocean",
+        src: digitalocean
+    },
+    {
+        name: "collegefever",
+        src: collegefever
+    },
+    {
+        name: "hackerearth",
+        src: hackerearth
+    },
+    {
+        name: "inkmonk",
+        src: inkmonk
+    },
+    {
+        name: "ck",
+        src: ck
+    },
+    {
+        name: "paytm",
+        src: paytm
+    },
+    {
+        name: "festpav",
+        src: festpav
+    },
+    {
+        name: "hacksociety",
+        src: hacksociety
+    },
+    {
+        name: "knowafest",
+        src: knowafest
+    },
+    {
+        name: "wolfram",
+        src: wolfram
+    },
+    {
+        name: "codechef",
+        src: codechef
+    }
+  
+]
