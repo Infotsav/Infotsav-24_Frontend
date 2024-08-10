@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="w-screen bg-black px-5 md:px-10 text-[#ccc]">
-      <div className="flex flex-col md:flex-row md:justify-between items-center font-mono my-5 gap-5 md:my-10">
+      <div className="grid grid-cols-2 md:flex md:justify-between font-mono my-5 gap-5 md:my-10">
         <div className="flex flex-col self-start">
-          <span className="font-bold text-2xl mb-2">
+          <span className="font-bold text-xl text-center md:text-2xl mb-2">
             Join Us Now!
           </span>
           <Link to="/register" className="border border-[#ccc] hover:border-white py-1 px-3 rounded-full flex items-center hover:text-white">
@@ -17,7 +17,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col">
-          <span className="font-bold text-2xl mb-2">
+          <span className="font-bold text-xl text-center md:text-2xl mb-2">
             Get in touch
           </span>
           <div className="flex justify-around">
@@ -31,16 +31,16 @@ function Footer() {
             <Link to="/register" className="hover:text-white"><Mail /></Link>
           </div>
         </div>
-        <div className="flex flex-col self-end items-end">
-          <Link to="/events" className="hover:text-white text-2xl flex items-center">
+        <div className="flex md:flex-col gap-1 self-end items-end justify-between col-span-2 md:col-span-1">
+          <Link to="/events" className="hover:text-white text-xl md:text-2xl flex items-center">
             Events
             <ArrowUpRight className="w-7 h-7 ml-1" />
           </Link>
-          <Link to="/" className="hover:text-white text-2xl flex items-center">
+          <Link to="/" className="hover:text-white text-xl md:text-2xl flex items-center">
             Curtural
             <ArrowUpRight className="w-7 h-7 ml-1" />
           </Link>
-          <Link to="/" className="hover:text-white text-2xl flex items-center">
+          <Link to="/" className="hover:text-white text-xl md:text-2xl flex items-center">
             Home
             <ArrowUpRight className="w-7 h-7 ml-1" />
           </Link>
