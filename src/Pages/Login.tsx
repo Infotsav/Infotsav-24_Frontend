@@ -1,12 +1,14 @@
 // import React from 'react'
-import ComingSoon from '../Components/ComingSoon'
+import TabComponent from "../Components/Login/TabComponent";
+import ParticlesBackground from "../Components/ParticlesBackground";
 
 function Login() {
-    return (
-        <div>
-            <ComingSoon />
-        </div>
-    )
+  return (
+    <div>
+      <ParticlesBackground />
+      <TabComponent />
+    </div>
+  );
 }
 
-export default Login
+export default Login;
