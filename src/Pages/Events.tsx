@@ -10,11 +10,11 @@ function Events() {
       <main className="font-pixelify text-[#FEFEFE] max-w-[1440px] mx-auto">
         <ParticlesBackground />
 
-        <div className="relative  text-center mt-40 mb-20 text-slate-50  z-10 lg:text-5xl md:text-4xl  text-3xl  ">
+        <div className="relative  text-center mt-60 mb-40 text-slate-50  z-10 lg:text-[7vw] md:text-4xl  text-4xl">
           Events
         </div>
         <section className="my-20">
-          <MajorEvent />{" "}
+          <MajorEvent />
         </section>
         <section className="relative font-pixelify ">
           <Tabs />

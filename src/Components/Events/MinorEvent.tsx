@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 export default function MinorEvent() {
   return (
     <>
-      <div className="mx-auto w-9/12 mt-8">
-        <div className=" h-px p-px      bg-gray-500 border-0  "></div>
-        <div className=" ">
-          <p className="inline-flex text-4xl my-3">Sub Category</p>
+      <div className="mx-auto w-9/12 mt-10">
+        <div className=" h-px p-px bg-gray-500 border-0"></div>
+        <div className=" my-6">
+          <p className="inline-flex text-4xl my-3">
+            Sub Category
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto gap-6">
             <EventBox />
             <EventBox />
@@ -17,6 +21,7 @@ export default function MinorEvent() {
 }
 
 export function EventBox() {
+  const navigate = useNavigate();
   return (
     <>
       {" "}
@@ -35,8 +40,7 @@ export function EventBox() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatibus, reprehenderit, aliquid pariatur aut repellat
               perspiciatis consequuntur laboriosam cum aspernatur ipsum error
-              vitae neque harum, similique illo perferendis ut excepturi a!
-              perspiciatis consequuntur laboriosam cum aspernatur ipsum error
+              vitae neque harum
             </p>
 
             <div className="h-1/3  flex flex-col justify-end   mb-2">
@@ -44,6 +48,7 @@ export function EventBox() {
               <button
                 type="button"
                 className=" w-fit bg-black hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 my-2 ring-1 ring-slate-50"
+                onClick={() => navigate("/eventdetails")}
               >
                 View Details
               </button>

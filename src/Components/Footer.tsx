@@ -45,8 +45,12 @@ function Footer() {
             Events
             <ArrowUpRight className="w-7 h-7 ml-1" />
           </Link>
-          <Link to="/" className="hover:text-white text-2xl flex items-center">
-            Curtural
+          <Link to="/contact" className="hover:text-white text-2xl flex items-center">
+            Contact
+            <ArrowUpRight className="w-7 h-7 ml-1" />
+          </Link>
+          <Link to="/register" className="hover:text-white text-2xl flex items-center">
+            Ambassador
             <ArrowUpRight className="w-7 h-7 ml-1" />
           </Link>
           <Link to="/" className="hover:text-white text-2xl flex items-center">

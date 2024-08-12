@@ -1,27 +1,18 @@
 export const contacts = [
   {
-    name: "Person 1",
-    email: "ieeestudentbranch@iiitm.ac.in",
-    number: "+91-7991101270",
+    name: "Uajjwal Sharma",
+    email: "infotsav@iiitm.ac.in",
+    number: "+91 8769445541",
   },
   {
-    name: "Person 2",
-    email: "ieeestudentbranch@iiitm.ac.in",
-    number: "+91-7991101270",
+    name: "Kunal Vardhani",
+    email: "infotsav@iiitm.ac.in",
+    number: "+91 9929646997",
   },
   {
-    name: "Person 3",
-    email: "ieeestudentbranch@iiitm.ac.in",
-    number: "+91-7991101270",
+    name: "Aditya Kumar Singh",
+    email: "infotsav@iiitm.ac.in",
+    number: "+91 8303660725",
   },
-  {
-    name: "Person 4",
-    email: "ieeestudentbranch@iiitm.ac.in",
-    number: "+91-7991101270",
-  },
-  {
-    name: "Person 5",
-    email: "ieeestudentbranch@iiitm.ac.in",
-    number: "+91-7991101270",
-  },
+
 ];
