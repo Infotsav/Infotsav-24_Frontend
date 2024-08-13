@@ -2,7 +2,7 @@ export const eventsJson =  [
         {
             "id": 1,
             "name": "Hackathlon",
-            "category": "Coding",
+            "category": "Technical",
             "about": "A flagship hackathon challenging coders to solve real-life problems by developing innovative websites, apps, or desktop solutions.",
             "fee": 0,
             "date": "2024-10-18",
@@ -51,7 +51,7 @@ export const eventsJson =  [
         {
             "id": 3,
             "name": "Code Rush",
-            "category": "Coding",
+            "category": "Technical",
             "about": "A high-intensity coding contest testing participants' logic, math, and algorithmic skills through complex problem statements.",
             "fee": 0,
             "date": "2024-10-18",
@@ -101,7 +101,7 @@ export const eventsJson =  [
         {
             "id": 4,
             "name": "Ideathon",
-            "category": "Innovation",
+            "category": "Technical",
             "about": "A dynamic team-based event challenging participants to solve complex problems through innovation and creativity.",
             "fee": 0,
             "date": "2024-10-18",
@@ -149,7 +149,7 @@ export const eventsJson =  [
         {
             "id": 5,
             "name": "Capture the Flag (CTF)",
-            "category": "Cybersecurity",
+            "category": "Technical",
             "about": "An online cybersecurity competition where participants solve challenges to capture flags and accumulate points.",
             "fee": 0,
             "date": "2024-10-20",
@@ -361,7 +361,7 @@ export const eventsJson =  [
         {
             "id": 9,
             "name": "Drone Shot",
-            "category": "Drone Racing",
+            "category": "Robotics",
             "about": "A challenging event where participants create and pilot self-made drones through a complex, obstacle-filled course testing agility, control, and durability.",
             "fee": 0,
             "date": "2024-10-21",
@@ -473,7 +473,7 @@ export const eventsJson =  [
         {
             "id": 12,
             "name": "Pinnacle",
-            "category": "Management",
+            "category": "Managerial",
             "about": "If you have a unique idea that sets you on the path to becoming a successful entrepreneur, then Pinnacle is the event for you. As one of the most prestigious events of Infotsav, Pinnacle provides a platform for innovative ideas, offering the spark needed to ignite entrepreneurial success. This flagship event of Infotsav'19 attracts students from the best B-schools and engineering colleges across the country.",
             "fee": {
                 "phase_1": 0,
@@ -524,7 +524,7 @@ export const eventsJson =  [
         {
             "id": 13,
             "name": "Sameeksha",
-            "category": "Conference",
+            "category": "Managerial",
             "about": "The Annual Paper Presentation Conference, Sameeksha, is designed to encourage students to prepare and present meaningful papers and presentations on a wide range of topics, both technical and non-technical. This event offers students valuable early experience in researching, writing, and presenting ideas related to their areas of interest and expertise.",
             "fee": 0,
             "date": "2024-10-25",
@@ -561,6 +561,156 @@ export const eventsJson =  [
                     "The judges' decision will be final, and no arguments or appeals will be entertained.",
                     "Submitted papers will become the property of Sameeksha."
                 ]
+            }
+        },
+        {
+            "id": 15,
+            "name": "Online Poster-Making Competition",
+            "category": "Online",
+            "about": "An online competition open to participants of all ages, encouraging creativity through poster design on focused themes.",
+            "fee": 0,
+            "date": "2024-09-20",
+            "img":"",
+            "contact": [
+                {
+                    "name": "Nick Jon",
+                    "phone": "9999999999",
+                    "email": "nick.jon@example.com"
+                }
+            ],
+            "description": {
+                "overview": "Participate in the Online Poster-Making Competition and showcase your creativity by designing a poster based on one of the given themes. The event is open to everyone, from students to professionals, and aims to encourage visual expression of impactful ideas.",
+                "eligibility": [
+                    "Open to all participants.",
+                    "One entry per participant."
+                ],
+                "submission_guidelines": [
+                    "Participants must create their posters digitally using graphic design software.",
+                    "Submit the final poster as a link to the digital file (e.g., Google Drive, Dropbox).",
+                    "Ensure the submission link is accessible and the image quality is high."
+                ],
+                "content_guidelines": [
+                    "The poster must be original and created by the participant.",
+                    "Content should adhere to the event's themes and be appropriate for a general audience.",
+                    "Text usage should be minimal but impactful, focusing on visual representation."
+                ],
+                "judging_criteria": [
+                    "Visual impact and aesthetics, including color usage and design elements.",
+                    "Engagement through likes, shares, and comments on social platforms.",
+                    "Creativity and originality in interpreting the theme.",
+                    "Separate awards for each theme to ensure equal recognition."
+                ],
+                "event_structure": {
+                    "mode": "Online (Offsite Event)",
+                    "themes": [
+                        "Master Your Time: Time Management Techniques",
+                        "The Green Tech Revolution: Sustainable Technology",
+                        "Collaborate & Code: The Power of Teamwork in Hackathons",
+                        "AI in Everyday Life: Embrace the Future"
+                    ],
+                    "results_announcement": "Winners will be announced on October 20, 2024.",
+                    "prizes": "Vouchers will be awarded to the top designs for each theme."
+                }
+            }
+        },
+        {
+            "id": 16,
+            "name": "Blog-A-Thon",
+            "category": "Online",
+            "about": "It's time to showcase your creativity, analytical skills, and writing prowess!!! Blog-A-Thon aims to capture the essence of Infotsav while encouraging participants to explore their writing talents.",
+            "fee": 100,
+            "date": "2024-10-18",
+            "contact": [
+                {
+                    "name": "John Doe",
+                    "phone": "9876543210",
+                    "email": ""
+                },
+                {
+                    "name": "Jane Doe",
+                    "phone": "9876543210",
+                    "email": ""
+                }
+            ],
+            "description": {
+                "overview": "Blog-A-Thon is an engaging online blog writing competition that challenges participants to articulate their experiences, insights, and reflections on the 3 day Techno Managerial Fest, Infotsav. Participants will create and publish their blogs on a popular online platform .",
+                "eligibility": [
+                    "Open to all attendees of Infotsav, including students, faculty, and professionals.",
+                    "Participants must have attended at least one event or session during Infotsav to ensure relevant content.",
+                    "Prior blogging experience is not required, but familiarity with online blogging platforms is recommended."
+                ],
+                "participation_specification": [
+                    "This is an individual competition. Each participant must write and submit their blog independently.",
+                    "Blogs must be published on a designated online blog platform (e.g., Medium, WordPress, Blogger).",
+                    "Participants have 48 hours after the conclusion of Infotsav to publish and submit the link to their blog."
+                ],
+                "rules": [
+                    "1. Content:",
+                    "The blog must focus on the participant’s experience at Infotsav, discussing key events, takeaways, or personal reflections.",
+                    "The content should be original and not plagiarized. Any references or quotes should be properly cited.",
+                    "Participants are encouraged to include multimedia elements (images, videos, etc.) to enhance their blogs, provided they have the rights to use them.",
+                    "2. Submission Process:",
+                    "Once published, participants must submit the blog link through the official event submission form.",
+                    "Late submissions will not be accepted, and the blog must remain public until the end of the judging period",
+                    "3. Conduct:",
+                    "Participants must adhere to the blogging platform’s community guidelines.",
+                    "Any form of offensive or inappropriate content will result in immediate disqualification.",
+                    "The decision of the judges is final in all matters."
+                ],
+                "event_structure": {
+                    "mode": "Online",
+                    "submission": "The submission form opens immediately after Infotsav ends and closes 48 hours later.",
+                    "judgement": "A panel of judges, including event organizers, bloggers, and industry experts, reviews and evaluates the submissions based on the judging criteria: Relevance, Creativity, Engagement, Impact, Clarity and Structure."                }
+            }
+        },
+        {
+            "id": 18,
+            "name": "Music Album Re-design",
+            "category": "Online",
+            "about": "An online competition for students to creatively redesign music album covers, reflecting their interpretation of the album's theme.",
+            "fee": 0,
+            "date": "2024-09-15",
+            "contact": [
+                {
+                    "name": "Chris Evans",
+                    "phone": "9876543213",
+                    "email": "chris@example.com"
+                },
+                {
+                    "name": "Natalie Portman",
+                    "phone": "9876543214",
+                    "email": "natalie@example.com"
+                }
+            ],
+            "description": {
+                "overview": "Participate in the Music Album Re-design event and showcase your design skills by creating a unique album cover. Open to all students, this online event challenges participants to interpret and visually represent the themes of their chosen music album.",
+                "eligibility": [
+                    "Open to all students."
+                ],
+                "submission_guidelines": [
+                    "Redesigned album covers and mid-process pictures must be submitted by 2nd October.",
+                    "Late submissions will not be accepted.",
+                    "Submissions must be in high-resolution JPEG or PNG format, not exceeding 10 MB.",
+                    "Design must include the album title and artist's name."
+                ],
+                "design_guidelines": [
+                    "Participants can use any design software such as Canva, Photoshop, or Illustrator.",
+                    "The redesign should reflect the participant's interpretation of the album's theme, genre, or mood.",
+                    "Original designs only; plagiarism will result in disqualification.",
+                    "Include necessary design elements such as parental advisory warnings if relevant."
+                ],
+                "judging_criteria": [
+                    "Creativity and originality.",
+                    "Relevance to the album’s theme.",
+                    "Technical execution.",
+                    "Overall visual appeal."
+                ],
+                "event_structure": {
+                    "mode": "Online",
+                    "results_announcement": "Winners announced on the techfest day.",
+                    "prizes": "Top 3 designs receive certificates and prizes. Special mentions for categories like 'Most Creative Design' and 'Best Use of Software.'",
+                    "anonymity": "Use an identifier code provided by organizers instead of participant names."
+                }
             }
         },
                       
