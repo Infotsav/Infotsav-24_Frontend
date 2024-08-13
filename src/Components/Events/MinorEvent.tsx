@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { eventsJson } from '../../constants/eventJson';
 
 export default function MinorEvent() {
+
   return (
     <>
       <div className="mx-auto w-9/12 mt-10">
@@ -10,9 +12,11 @@ export default function MinorEvent() {
             Sub Category
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto gap-6">
-            <EventBox />
-            <EventBox />
-            <EventBox />
+            {
+              eventsJson.map((event, index) => (
+                <EventBox key={index} name={event.name} about={event.about} url={event.id} />
+              ))
+            }
           </div>
         </div>
       </div>
@@ -20,7 +24,7 @@ export default function MinorEvent() {
   );
 }
 
-export function EventBox() {
+export function EventBox({name,url,about}) {
   const navigate = useNavigate();
   return (
     <>
@@ -32,15 +36,12 @@ export function EventBox() {
               Prizes worth 60k
             </div>
             <div className=" hover:transition-all  group-hover:lg:text-2xl lg:text-3xl md:text-4xl group-hover:md:text-3xl  text-3xl group-hover:text-2xl transition-all duration-500 ease-in-out ">
-              Event Name
+              {name}
             </div>
           </div>
           <div className=" h-2/3   py-2  ">
             <p className=" line-clamp-5  py-4 text-xs     ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus, reprehenderit, aliquid pariatur aut repellat
-              perspiciatis consequuntur laboriosam cum aspernatur ipsum error
-              vitae neque harum
+              {about}
             </p>
 
             <div className="h-1/3  flex flex-col justify-end   mb-2">
@@ -48,7 +49,7 @@ export function EventBox() {
               <button
                 type="button"
                 className=" w-fit bg-black hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 my-2 ring-1 ring-slate-50"
-                onClick={() => navigate("/eventdetails")}
+                onClick={() => navigate(`/eventdetails/${url}`)}
               >
                 View Details
               </button>
