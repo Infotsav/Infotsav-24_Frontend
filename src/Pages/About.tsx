@@ -15,30 +15,31 @@ function About() {
           style={{ textOrientation: "mixed", writingMode: 'vertical-lr' }}>
           Infotsav
         </h1>
-        <div className="h-[69vh] w-[4rem] mr-10 bg-[#ccc] hidden md:block">
+        <div className="h-[125vh] w-[4rem] mr-10 bg-[#ccc] hidden md:block">
         </div>
         <div className="md:px-10 px-5">
           <h3 className='text-[#FEFEFE] text-3xl font-pixelify tracking-tight scroll-m-10 uppercase'>
-            Lorem Ipsum
+            About Infotsav
           </h3>
           <p className="leading-7 [&:not(:first-child)]:mt-6 text-white font-mono text-xl md:text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Lectus mauris ultrices eros in cursus. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Platea dictumst vestibulum rhoncus est pellentesque elit. Tempus urna et pharetra pharetra massa massa ultricies mi quis.
+            Infotsav is the flagship techno-managerial fest of Atal Bihari Vajpayee Indian Institute of Information Technology and Management (ABV-IIITM), Gwalior. It is a vibrant celebration of technology, management, and innovation, designed to ignite creativity and foster a competitive spirit among students. With participants from top technical and managerial institutions across the region, Infotsav is a melting pot of diverse ideas and skills.
+            Sponsored by leading tech companies, Infotsav stands out as a premier national-level technical festival. It offers a broad spectrum of events, from intense hackathons and challenging coding competitions to engaging quizzes and thought-provoking case studies. These events are meticulously crafted to test the participants' technical acumen, problem-solving abilities, and managerial skills.
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-6 text-white font-mono text-xl md:text-2xl">
-            Orci a scelerisque purus semper eget duis at tellus at. Consequat semper viverra nam libero justo laoreet. Purus non enim praesent elementum facilisis leo vel. Enim facilisis gravida neque convallis. Ac turpis egestas integer eget aliquet nibh praesent. Posuere sollicitudin aliquam ultrices sagittis. Eget felis eget nunc lobortis mattis aliquam faucibus purus in. Diam vel quam elementum pulvinar etiam non quam lacus. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin.
+            Infotsav is more than just a competition; it's an opportunity to gain national exposure, connect with industry leaders, and showcase one's talents on a grand stage. Participants have the chance to compete for substantial prize money, but the real reward lies in the experience and the recognition that comes with excelling in such a prestigious event.
+            Held from October 18th to 20th, Infotsav 2024 promises three days of high-octane competition, learning, and networking. Whether you're a coder, manager, developer, or thinker, Infotsav offers the perfect platform to embrace technology and creativity, challenge yourself, and emerge as a winner in both mind and spirit.
           </p>
         </div>
       </div>
       <div className="flex mb-5 md:mb-10">
         <div className="md:px-10 px-5">
           <h3 className='text-[#FEFEFE] text-3xl font-pixelify tracking-tight scroll-m-10 uppercase'>
-            Lorem Ipsum
+            About ABV-IIITM
           </h3>
           <p className="leading-7 [&:not(:first-child)]:mt-6 text-white font-mono text-xl md:text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Lectus mauris ultrices eros in cursus. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Platea dictumst vestibulum rhoncus est pellentesque elit. Tempus urna et pharetra pharetra massa massa ultricies mi quis.
+            Atal Bihari Vajpayee Indian Institute of Information Technology and Management, also known as Indian Institute of Information Technology and Management, is a higher-education institute located in Gwalior, Madhya Pradesh, India. Established in 1997 by Government of India, MHRD.It is an effort by MHRD towards creating professionals in areas of management and information technology from same institute.Initially started as IIITM,this institute was prefixed by ABV in 2002 to honour the then Prime Minister Atal Bihari Vajpayee
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-6 text-white font-mono text-xl md:text-2xl">
-            Orci a scelerisque purus semper eget duis at tellus at. Consequat semper viverra nam libero justo laoreet. Purus non enim praesent elementum facilisis leo vel. Enim facilisis gravida neque convallis. Ac turpis egestas integer eget aliquet nibh praesent. Posuere sollicitudin aliquam ultrices sagittis. Eget felis eget nunc lobortis mattis aliquam faucibus purus in. Diam vel quam elementum pulvinar etiam non quam lacus. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin.
           </p>
         </div>
         <div className="h-[69vh] w-[4rem] ml-10 bg-[#ccc] hidden md:block">
