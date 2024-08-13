@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { eventsJson } from '../../constants/eventJson';
+import { useState } from "react";
 
-export default function MinorEvent() {
+export default function MinorEvent({category}) {
 
   return (
     <>
@@ -9,12 +10,12 @@ export default function MinorEvent() {
         <div className=" h-px p-px bg-gray-500 border-0"></div>
         <div className=" my-6">
           <p className="inline-flex text-4xl my-3">
-            Sub Category
+            {category}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto gap-6">
             {
               eventsJson.map((event, index) => (
-                <EventBox key={index} name={event.name} about={event.about} url={event.id} />
+                event.category === category && <EventBox key={index} name={event.name} url={event.url} about={event.about} />
               ))
             }
           </div>
