@@ -11,7 +11,7 @@ const Landing = () => {
                 <h1 className='text-[#FEFEFE] md:text-[12vw] text-[70px] font-pixelify z-10'>
                     Infotsav
                 </h1>
-                <h2 className='text-[#BEFF04] text-[6vw] font-pixelify z-10 mt-[-40px]'>
+                <h2 className='text-[#BEFF04] text-[6vw] font-pixelify z-10 md:mt-[-40px]'>
                     2024
                 </h2>
             </div>

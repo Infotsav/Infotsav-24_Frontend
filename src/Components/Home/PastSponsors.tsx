@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import Slider from "react-infinite-logo-slider";
-import { pastSponsors1, pastSponsors2 } from "../../constants/PastSponsors";
+import { pastSponsors1, pastSponsors2 } from "../../constants/PastSponsors.ts";
 import PastSponsorCard from "./PastSponsorCard";
 
 const PastSponsors = () => {
@@ -22,7 +22,7 @@ const PastSponsors = () => {
             gap={100}
             unit="px"
           >
-            {pastSponsors1.map(({ name, src }, index) => (
+            {pastSponsors1.map(({ name, src }: any, index: any) => (
               <Slider.Slide key={index}>
                 <PastSponsorCard src={src} name={name} />
               </Slider.Slide>
@@ -36,27 +36,27 @@ const PastSponsors = () => {
             gap={100}
             unit="px"
           >
-            {pastSponsors2.map(({ name, src }, index) => (
+            {pastSponsors2.map(({ name, src }: any, index: any) => (
               <Slider.Slide key={index}>
                 <PastSponsorCard src={src} name={name} />
               </Slider.Slide>
             ))}
           </Slider>
           <div className="md:hidden">
-          <Slider
-            className="slider"
-            duration={7}
-            pauseOnHover={true}
-            reverse={false}
-            gap={100}
-            unit="px"
-          >
-            {pastSponsors1.map(({ name, src }, index) => (
-              <Slider.Slide key={index}>
-                <PastSponsorCard src={src} name={name} />
-              </Slider.Slide>
-            ))}
-          </Slider>
+            <Slider
+              className="slider"
+              duration={7}
+              pauseOnHover={true}
+              reverse={false}
+              gap={100}
+              unit="px"
+            >
+              {pastSponsors1.map(({ name, src }: any, index: any) => (
+                <Slider.Slide key={index}>
+                  <PastSponsorCard src={src} name={name} />
+                </Slider.Slide>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>

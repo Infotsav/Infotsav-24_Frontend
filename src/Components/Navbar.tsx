@@ -36,7 +36,7 @@ function Navbar() {
                 >
                     <img src="/logo.png" alt="hell" className="h-[35px]" />
                     <h1 className="mr-[20px] font-pixelify font-black text-xl">
-                        Infostav
+                        Infotsav
                     </h1>
                 </div>
 

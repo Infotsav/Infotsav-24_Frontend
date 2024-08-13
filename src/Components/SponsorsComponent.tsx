@@ -1,5 +1,6 @@
-import React from 'react'
+// import React from 'react'
 import { sponsorPage } from '../constants/PastSponsors';
+
 
 export const SponsorsComponent = () => {
   return (
@@ -13,7 +14,7 @@ export const SponsorsComponent = () => {
 
       <div className='w-full mt-20 items-center'>
         <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-12 justify-center w-full'>
-          {sponsorPage.map((sponsor, index) => (
+          {sponsorPage.map((sponsor: any, index: any) => (
             <div key={index} className='flex justify-center items-center'>
               <img
                 src={sponsor.src}

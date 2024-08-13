@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 import stars from "../../assets/stars.png";
 import splash from "../../assets/splash.png";
-import IntroNavBar from "./IntroNavBar";
+import IntroNavBar from "./IntroNavBar.tsx";
 
 
 const Intro = () => {
@@ -19,16 +19,16 @@ const Intro = () => {
             }}
           >
             <div className="relative w-full h-full flex justify-center items-center">
-          <div className="relative mx-auto z-[29] w-[70vw] aspect-video overflow-hidden flex justify-center items-center max-w-[1000px]">
-            <video
-              src="https://static.vecteezy.com/system/resources/previews/004/827/218/mp4/abstract-technology-big-data-background-concept-motion-of-digital-data-flow-transferring-of-big-data-transfer-and-storage-of-data-sets-block-chain-server-hi-speed-internet-free-video.mp4"
-              className="relative mx-auto aspect-video"
-              controls={true}
-              autoPlay={true}
-              loop={true}
-            ></video>
-          </div>
-        </div>
+              <div className="relative mx-auto z-[29] w-[70vw] aspect-video overflow-hidden flex justify-center items-center max-w-[1000px]">
+                <video
+                  src="https://static.vecteezy.com/system/resources/previews/004/827/218/mp4/abstract-technology-big-data-background-concept-motion-of-digital-data-flow-transferring-of-big-data-transfer-and-storage-of-data-sets-block-chain-server-hi-speed-internet-free-video.mp4"
+                  className="relative mx-auto aspect-video"
+                  controls={true}
+                  autoPlay={true}
+                  loop={true}
+                ></video>
+              </div>
+            </div>
           </div>
         </div>
 

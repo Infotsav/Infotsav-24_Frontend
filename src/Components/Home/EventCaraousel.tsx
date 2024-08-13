@@ -1,7 +1,9 @@
 // import React from 'react';
 import mosacibg from "../../assets/mosiacbg.png"
+import { useNavigate } from "react-router-dom";
 
 function EventCaraousel() {
+    const navigate = useNavigate();
     return (
         <div
             className="z-40 h-full flex justify-center items-center my-[100px] font-pixelhugger flex-col"
@@ -30,6 +32,7 @@ function EventCaraousel() {
                         boxShadow: '1px 1px 0px #ff4910, 2px 2px 0px #ff4910, 1px 1px 0px #ff4910, 2px 2px 0px #ff4910, 5px 5px 0px #ff4910, 6px 6px 0px #ff4910',
                         whiteSpace: 'nowrap',
                     }}
+                    onClick={() => { navigate("/events") }}
                 >
                     Explore More
                 </button>
@@ -42,18 +45,22 @@ function EventCaraousel() {
                         src="https://api.warrobots.com/storage/robot/77/regular_detail_picture-c8d48a4ea098c973e1e9874bf7030187.jpg"
                         alt="Event"
                     />
-                    <div className="text-black z-30">
-                        <h2 className="text-4xl font-bold mb-6">Flagship Events</h2>
-                        <p className="font-semibold">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, officiis laudantium ipsum nulla ut tempore praesentium molestias magni, eos sapiente impedit unde, sequi rem dolor vero perferendis nisi? Sint accusantium asperiores nostrum reiciendis incidunt laboriosam placeat.
-                        </p>
+                    <div>
+                        <div className="text-black z-30">
+                            <h2 className="text-4xl font-bold mb-6">
+                                Flagship Events
+                            </h2>
+                            <p className="font-semibold">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, officiis laudantium ipsum nulla ut tempore praesentium molestias magni, eos sapiente impedit unde, sequi rem dolor vero perferendis nisi? Sint accusantium asperiores nostrum reiciendis incidunt laboriosam placeat.
+                            </p>
+                        </div>
+                        <div className="dots flex justify-center items-center mt-6">
+                            <div className="dot bg-black w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
+                            <div className="dot bg-slate-500 w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
+                            <div className="dot bg-slate-500 w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
+                            <div className="dot bg-slate-500 w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
+                        </div>
                     </div>
-                </div>
-                <div className="dots flex justify-center items-center mt-6">
-                    <div className="dot bg-black w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
-                    <div className="dot bg-slate-500 w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
-                    <div className="dot bg-slate-500 w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
-                    <div className="dot bg-slate-500 w-3 h-3 rounded-full mx-1 cursor-pointer"></div>
                 </div>
             </div>
         </div>
