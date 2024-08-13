@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 export default function MajorEvent() {
+  const navigate = useNavigate();
+
+
   return (
     <>
       <div className="overflow-hidden relative hover:transition-all group w-9/12 rounded-lg max-h-auto h-[470px]   border border-slate-500 mx-auto  bg-[url('../src/assets/EventsPage/majorEvent.jpeg')] bg-cover bg-center  grayscale  backdrop-filter   ">
@@ -25,6 +30,7 @@ export default function MajorEvent() {
               <button
                 type="button"
                 className=" w-fit bg-black hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 my-2 ring-1 ring-slate-50"
+                onClick={() => navigate("/eventdetails")}
               >
                 View Details
               </button>
