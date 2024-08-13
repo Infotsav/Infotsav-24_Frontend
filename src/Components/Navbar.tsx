@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Hamburger from "../assets/hamburger-icon.png";
 import { ArrowUpRight } from "lucide-react";
+import UserDialogue from './User/UserDialogue';
 
 function Navbar() {
     const navigate = useNavigate();
@@ -13,6 +14,12 @@ function Navbar() {
             setMenuClick(false);
         }
     };
+
+    const [token, setToken] = useState<string | null>(null);
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setToken(token);
+    },[]);
 
     useEffect(() => {
         setMenuClick(false);
@@ -50,12 +57,18 @@ function Navbar() {
                 </div>
 
                 <div>
-                    <button
-                        onClick={() => navigate('/register')}
-                        className="bg-black mx-3 px-4 py-1 text-white font-pixelify rounded-3xl"
-                    >
-                        Register
-                    </button>
+                    {
+                        token ? (
+                            <UserDialogue />
+                        ) : (
+                            <button
+                                onClick={() => navigate('/register')}
+                                className="bg-black mx-3 px-4 py-1 text-white font-pixelify rounded-3xl"
+                            >
+                                Register
+                            </button>
+                        )
+                    }
                 </div>
             </div>
 
