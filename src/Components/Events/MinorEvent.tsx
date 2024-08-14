@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { eventsJson } from '../../constants/eventJson';
-import { useState } from "react";
 
 export default function MinorEvent({category}) {
 
