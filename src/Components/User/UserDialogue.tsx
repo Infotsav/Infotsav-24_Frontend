@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa';  
+import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+import { FaUserCircle } from 'react-icons/fa';
 
 function UserProfile() {
     const [showDialog, setShowDialog] = useState(false);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const toggleDialog = () => {
         setShowDialog(!showDialog);
@@ -16,7 +16,7 @@ function UserProfile() {
         window.location.reload();
     };
 
-   const referralId = localStorage.getItem('referralId');
+    const referralId = localStorage.getItem('referralId');
 
 
     return (
