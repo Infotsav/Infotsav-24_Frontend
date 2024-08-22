@@ -6,13 +6,13 @@ import IntroNavBar from "./IntroNavBar";
 
 const Intro = () => {
   return (
-    <div className="relative h-screen bg-[#3a1119] w-full">
+    <div className="relative md:h-screen sm:h-[70vh] h-[50vh] bg-[#3a1119] w-full">
       <div className="absolute w-full flex flex-col items-center gap-5">
         <IntroNavBar />
-        <div className="relative w-full h-full flex justify-center items-center
+        <div className="relative w-full md:h-full h-[50vh] sm:h-[70vh] flex justify-center items-center
         ">
           <div
-            className="relative mx-auto flex jusitfy-center items-center bg-[#FFFFFF] z-[29] w-[80vw] max-w-[1200px] rounded-3xl border-4 border-black overflow-hidden bgIntro max-h-[80vh]"
+            className="relative mx-auto flex jusitfy-center items-center bg-[#FFFFFF] z-[29] w-[80vw] max-w-[1200px] rounded-3xl border-4 border-black overflow-hidden bgIntro max-h-[80vh] max-md:-mt-36"
             style={{
               boxShadow:
                 "1px 1px 0px #000000, 2px 2px 0px #000000, 3px 3px 0px #000000, 4px 4px 0px #000000, 5px 5px 0px #000000, 6px 6px 0px #000000",

@@ -20,3 +20,10 @@ background-size: cover;
         display: none;
     }
 }
+@media screen and (max-width: 450px) {
+    .sponsorCardContainer{
+        width: 100px !important;
+        height: 100px !important;
+        margin: -10px !important;
+    }
+}

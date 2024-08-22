@@ -23,7 +23,7 @@ const PastSponsors = () => {
             unit="px"
           >
             {pastSponsors1.map(({ name, src }, index) => (
-              <Slider.Slide key={index}>
+              <Slider.Slide key={index} className="sponsorCardContainer">
                 <PastSponsorCard src={src} name={name} />
               </Slider.Slide>
             ))}
@@ -37,7 +37,7 @@ const PastSponsors = () => {
             unit="px"
           >
             {pastSponsors2.map(({ name, src }, index) => (
-              <Slider.Slide key={index}>
+              <Slider.Slide key={index} className="sponsorCardContainer">
                 <PastSponsorCard src={src} name={name} />
               </Slider.Slide>
             ))}
@@ -52,7 +52,7 @@ const PastSponsors = () => {
             unit="px"
           >
             {pastSponsors1.map(({ name, src }, index) => (
-              <Slider.Slide key={index}>
+              <Slider.Slide key={index} className="sponsorCardContainer">
                 <PastSponsorCard src={src} name={name} />
               </Slider.Slide>
             ))}
