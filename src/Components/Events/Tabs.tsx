@@ -1,14 +1,19 @@
 import { useState } from "react";
 import MinorEvent from "./MinorEvent";
-export default function Tabs() {
-  const [selectedOption, setSelectedOption] = useState("Technical");
 
+
+export default function Tabs() {
+
+  const [selectedOption, setSelectedOption] = useState("Technical");
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedOption(event.target.value);
   };
+
+
   return (
     <>
       <div>
+
         <div className="sm:hidden ">
           <select
             onChange={handleChange}
@@ -21,6 +26,7 @@ export default function Tabs() {
             <option value="Online">Online</option>
           </select>
         </div>
+
         <ul className="w-8/12 mx-auto hidden text-md bg-zinc-800 font-medium text-center text-gray-500 rounded-lg shadow sm:flex dark:divide-gray-700 dark:text-gray-400 ">
           <li className="w-full focus-within:z-10">
             <a
@@ -31,6 +37,7 @@ export default function Tabs() {
               Technical
             </a>
           </li>
+
           <li className="w-full focus-within:z-10 ">
             <a
               onClick={() => setSelectedOption("Managerial")}
@@ -40,6 +47,7 @@ export default function Tabs() {
               Managerial
             </a>
           </li>
+
           <li className="w-full focus-within:z-10">
             <a
               onClick={() => setSelectedOption("Robotics")}
@@ -49,6 +57,7 @@ export default function Tabs() {
               Robotics
             </a>
           </li>
+
           <li className="w-full focus-within:z-10">
             <a
               onClick={() => setSelectedOption("Online")}
@@ -58,7 +67,10 @@ export default function Tabs() {
               Online
             </a>
           </li>
+
         </ul>
+
+
         <div className="mt-4">
           {selectedOption === "Technical" && (
             <div>
@@ -67,6 +79,7 @@ export default function Tabs() {
               </div>
             </div>
           )}
+
           {selectedOption === "Managerial" && (
             <div>
               <div>
@@ -74,6 +87,7 @@ export default function Tabs() {
               </div>
             </div>
           )}
+
           {selectedOption === "Robotics" && (
             <div>
               <div>
@@ -81,6 +95,7 @@ export default function Tabs() {
               </div>
             </div>
           )}
+
           {selectedOption === "Online" && (
             <div>
               <div>
@@ -88,6 +103,7 @@ export default function Tabs() {
               </div>
             </div>
           )}
+          
         </div>
       </div>
     </>

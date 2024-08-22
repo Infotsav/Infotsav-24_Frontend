@@ -19,7 +19,7 @@ function Navbar() {
     useEffect(() => {
         const token = localStorage.getItem('token');
         setToken(token);
-    },[]);
+    }, []);
 
     useEffect(() => {
         setMenuClick(false);
@@ -75,7 +75,7 @@ function Navbar() {
 
             {/* pop-down menu */}
             <div
-                className={`bg-[#FFFFFF] h-[300px] z-30 w-[80vw] rounded-3xl border-4 border-black flex flex-col justify-between items-center px-20px font-pixelify-semibold text-xl font-semibold transition-all duration-300 ease-in-out ${menuClick ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0 overflow-hidden'
+                className={`bg-[#FFFFFF] h-[350px] z-30 w-[80vw] rounded-3xl border-4 border-black flex flex-col justify-between items-center px-20px font-pixelify-semibold text-xl font-semibold transition-all duration-300 ease-in-out ${menuClick ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0 overflow-hidden'
                     }`}
                 style={{
                     padding: "20px",
@@ -118,6 +118,16 @@ function Navbar() {
                         className='rounded-3xl border-4 h-[50px] border-black w-full text-left px-5 flex justify-between items-center'
                     >
                         Contact Us
+                        <ArrowUpRight className="arrowIcon w-7 h-7 ml-1" />
+                    </button>
+                </div>
+
+                <div className="w-full px-5">
+                    <button
+                        onClick={() => navigate('/meet-the-team')}
+                        className='rounded-3xl border-4 h-[50px] border-black w-full text-left px-5 flex justify-between items-center'
+                    >
+                        Meet The Team
                         <ArrowUpRight className="arrowIcon w-7 h-7 ml-1" />
                     </button>
                 </div>

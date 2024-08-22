@@ -1,4 +1,4 @@
-import { contacts } from "../../constants/contacts";
+import contacts from "../../constants/contacts.json";
 
 type ContactInfoProps = {};
 
