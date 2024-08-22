@@ -104,8 +104,8 @@ function Login() {
         <ParticlesBackground />
         <div className='form-container h-full w-full flex justify-center items-center flex-col z-[20] relative'>
           {isRegistering ? (
-            <form onSubmit={handleRegistrationSubmit} className='h-[80%] w-[60%] mt-[5%]  backdrop-blur-sm flex flex-col justify-center items-center rounded-2xl border border-2 borer-white'>
-              <div className='h-[100%] w-[100%] flex flex-col justify-start items-center gap-[7%] py-[2.5%] items-center'>
+            <form onSubmit={handleRegistrationSubmit} className='h-[80%] w-[60%] mt-[5%]  backdrop-blur-sm flex flex-col justify-center items-center rounded-2xl border-2 borer-white'>
+              <div className='h-[100%] w-[100%] flex flex-col justify-start items-center gap-[7%] py-[2.5%]'>
                 <h2 className=' text-4xl h-[20px] mb-[20px] text-white'>Register</h2>
                 <input
                   type="text"
@@ -159,7 +159,7 @@ function Login() {
               </button>
             </form>
           ) : (
-            <form onSubmit={handleLoginSubmit} className='h-[80%] w-[60%] mt-[5%]   flex flex-col justify-center items-center border border-2 borer-white rounded-xl' >
+            <form onSubmit={handleLoginSubmit} className='h-[80%] w-[60%] mt-[5%]   flex flex-col justify-center items-center border-2 borer-white rounded-xl' >
               <div className='h-[100%] w-[100%] flex flex-col justify-start gap-[5%] py-[2.5%] items-center'>
                 <h2 className=' text-4xl text-white'>Login</h2>
                 <input

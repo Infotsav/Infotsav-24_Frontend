@@ -726,7 +726,4 @@ export const eventsJson =  [
             }
         }
     },
-                  
-
 ]
-

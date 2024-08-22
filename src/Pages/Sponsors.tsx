@@ -6,7 +6,6 @@ function Sponsors() {
     return (
         <div className=''>
             <ParticlesBackground />
-
             <SponsorsComponent />
         </div>
     );
