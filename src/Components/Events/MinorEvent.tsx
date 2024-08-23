@@ -74,7 +74,8 @@ interface EventBoxProps {
 export function EventBox({ name, id, about, category, img }: EventBoxProps) {
   const navigate = useNavigate();
   return (
-    <div className={`overflow-hidden aspect-square relative hover:transition-all group rounded-lg max-h-auto border border-slate-500 mx-auto bg-[url('${img}')] bg-cover bg-center  backdrop-filter`}>
+    <div className={`overflow-hidden aspect-square relative hover:transition-all group rounded-lg max-h-auto border border-slate-500 mx-auto bg-cover bg-center  backdrop-filter`}
+    style={{backgroundImage:`url(${img})`}}>
 
       <div className="h-full lg:p-6 p-2 group-hover:backdrop-blur-sm transition-all duration-500 ease-in-out bg-black bg-opacity-30">
 
