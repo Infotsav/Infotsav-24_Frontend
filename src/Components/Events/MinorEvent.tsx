@@ -10,6 +10,7 @@ type EventType = {
   about: string;
   category: string;
   id: number;
+  img: string;
 };
 
 interface MinorEventProps {
@@ -52,6 +53,7 @@ export default function MinorEvent({ category }: MinorEventProps) {
               id={event.id}
               about={event.about}
               category={category}
+              img={event.img}
             />
           ))}
         </div>
@@ -65,15 +67,16 @@ interface EventBoxProps {
   id: number;
   about: string;
   category?: string;
+  img:string;
 }
 
 
-export function EventBox({ name, id, about, category }: EventBoxProps) {
+export function EventBox({ name, id, about, category, img }: EventBoxProps) {
   const navigate = useNavigate();
   return (
-    <div className="overflow-hidden aspect-square relative hover:transition-all group rounded-lg max-h-auto border border-slate-500 mx-auto bg-[url('../src/assets/EventsPage/minorEvent.png')] bg-cover bg-center grayscale backdrop-filter">
+    <div className={`overflow-hidden aspect-square relative hover:transition-all group rounded-lg max-h-auto border border-slate-500 mx-auto bg-[url('${img}')] bg-cover bg-center  backdrop-filter`}>
 
-      <div className="h-full lg:p-6 p-2 group-hover:backdrop-blur-sm transition-all duration-500 ease-in-out">
+      <div className="h-full lg:p-6 p-2 group-hover:backdrop-blur-sm transition-all duration-500 ease-in-out bg-black bg-opacity-30">
 
         <div className="h-full flex flex-col justify-between group-hover:h-1/3 transition-all duration-500 ease-in-out">
           <div className="text-slate-50 transition-all duration-500 ease-in-out z-10 group-hover:lg:text-2xl lg:text-3xl md:text-3xl group-hover:md:text-2xl text-3xl group-hover:text-2xl">
