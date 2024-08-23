@@ -111,7 +111,7 @@
         "fee": 0,
         "date": "2024-09-15",
         "url": "",
-        "img":"../src/assets/EventsPage/musicAlbum.jpg",
+        "img":"https://res.cloudinary.com/dih6gwkau/image/upload/v1724434485/music_album_hqqzaq.jpg",
         "contact": [
             {
                 "name": "Chris Evans",
