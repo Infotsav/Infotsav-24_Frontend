@@ -222,7 +222,7 @@
         "about": "Join the Blazing Wheels event and race your robots through a thrilling course designed to test speed and agility. Teams will compete in a high-speed race, navigating through challenging tracks with precision and control. This event promises a battle of technology and skill, where only the best robots will prevail.",
         "fee": 0,
         "date": "2024-10-22",
-        "img": "",
+        "img": "../src/assets/EventsPage/blazingWheel.jpg",
         "url": "",
         "contact": [
             {

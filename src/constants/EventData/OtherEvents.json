@@ -58,6 +58,7 @@
         "fee": 100,
         "date": "2024-10-18",
         "url": "",
+        "img":"../src/assets/EventsPage/blogathon.jpg",
         "contact": [
             {
                 "name": "John Doe",
@@ -110,6 +111,7 @@
         "fee": 0,
         "date": "2024-09-15",
         "url": "",
+        "img":"../src/assets/EventsPage/musicAlbum.jpg",
         "contact": [
             {
                 "name": "Chris Evans",
