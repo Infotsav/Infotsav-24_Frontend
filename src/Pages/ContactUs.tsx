@@ -57,7 +57,7 @@ function ContactUs() {
           />
           <textarea
             placeholder="MESSAGE"
-            className="w-[100%] md:w-[80%] h-[70%] lg:w-[60%]  rounded-sm px-[15px] bg-transparent border-2 border-indigo-500 resize-none"
+            className="w-[100%] md:w-[80%] h-[70%] lg:w-[60%] pt-3 rounded-sm px-[15px] bg-transparent border-2 border-indigo-500 resize-none"
             onChange={handleInputChange}
             value={formData.message}
             name="message"
