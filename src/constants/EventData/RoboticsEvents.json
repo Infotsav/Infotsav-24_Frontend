@@ -6,7 +6,7 @@
         "about": "A battle where powerful robots face off in an arena, aiming to overpower their opponent within a fixed time duration.",
         "fee": 0,
         "date": "2024-10-20",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724434487/robowars_gwtcel.jpg",
         "url": "",
         "contact": [
             {
@@ -89,7 +89,7 @@
         "about": "An intense and thrilling battle where robots fight each other in an arena, aiming to overpower opponents within a fixed time duration.",
         "fee": 0,
         "date": "2024-10-20",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724434487/robowars_gwtcel.jpg",
         "url": "",
         "contact": [
             {
@@ -222,7 +222,7 @@
         "about": "Join the Blazing Wheels event and race your robots through a thrilling course designed to test speed and agility. Teams will compete in a high-speed race, navigating through challenging tracks with precision and control. This event promises a battle of technology and skill, where only the best robots will prevail.",
         "fee": 0,
         "date": "2024-10-22",
-        "img": "../src/assets/EventsPage/blazingWheel.jpg",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724434512/blazing_wheel_stuwv6.jpg",
         "url": "",
         "contact": [
             {
