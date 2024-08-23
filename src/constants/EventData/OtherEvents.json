@@ -58,7 +58,7 @@
         "fee": 100,
         "date": "2024-10-18",
         "url": "",
-        "img":"../src/assets/EventsPage/blogathon.jpg",
+        "img":"https://res.cloudinary.com/dih6gwkau/image/upload/v1724434509/blogathon_ntqjnj.jpg",
         "contact": [
             {
                 "name": "John Doe",
