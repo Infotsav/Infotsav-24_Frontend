@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import ParticlesBackground from "../Components/ParticlesBackground";
 
 function Login() {
@@ -25,27 +25,30 @@ function Login() {
       email: regformData.email,
       collegeName: regformData.collegeName,
       contactNumber: regformData.contactNumber,
-      password: regformData.password
-    }
-    const response = await fetch('http://localhost:8000/api/v1/ambassador/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(regData),
-    });
+      password: regformData.password,
+    };
+    const response = await fetch(
+      "http://localhost:8000/api/v1/ambassador/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(regData),
+      }
+    );
     console.log(regData);
 
     const data = await response.json();
     // data contains name,token,referral_id same them in local storge and use them in the app
     console.log(data);
     if (data.token) {
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('referralId', data.referralNumber);
-      localStorage.setItem('name', data.username);
-      console.log('Registration successful');
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("referralId", data.referralNumber);
+      localStorage.setItem("name", data.username);
+      console.log("Registration successful");
     } else {
-      console.log('Registration failed');
+      console.log("Registration failed");
     }
     window.location.reload();
   };
@@ -60,27 +63,30 @@ function Login() {
   const handleLoginSubmit = async (e: any) => {
     e.preventDefault();
 
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
 
-    const response = await fetch('http://localhost:8000/api/v1/ambassador/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,  // Include the token in the Authorization header
-      },
-      body: JSON.stringify(loginFormData),
-    });
+    const response = await fetch(
+      "http://localhost:8000/api/v1/ambassador/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+        },
+        body: JSON.stringify(loginFormData),
+      }
+    );
 
     const data = await response.json();
     // console.log(data);
     if (data.token) {
       // If the login is successful and a new token is received, update the token in localStorage
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('referralId', data.referralNumber);
-      localStorage.setItem('name', data.username);
-      console.log('Login successful');
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("referralId", data.referralNumber);
+      localStorage.setItem("name", data.username);
+      console.log("Login successful");
     } else {
-      console.log('Login failed');
+      console.log("Login failed");
     }
 
     window.location.reload();
@@ -99,22 +105,26 @@ function Login() {
   };
 
   return (
-    <div className='h-full w-full'>
-      <div className="h-screen w-full flex justify-center items-center ">
+    <div className="h-full w-full">
+      <div className="h-auto w-full flex justify-center items-center ">
         <ParticlesBackground />
-        <div className='form-container h-full w-full flex justify-center items-center flex-col z-[20] relative'>
+        <div className="form-container h-full w-full flex justify-center items-center flex-col z-[20] relative mt-24">
           {isRegistering ? (
-            <form onSubmit={handleRegistrationSubmit} className='h-[80%] w-[60%] mt-[5%]  backdrop-blur-sm flex flex-col justify-center items-center rounded-2xl border-2 borer-white'>
-              <div className='h-[100%] w-[100%] flex flex-col justify-start items-center gap-[7%] py-[2.5%]'>
-                <h2 className=' text-4xl h-[20px] mb-[20px] text-white'>Register</h2>
+            <form
+              onSubmit={handleRegistrationSubmit}
+              className="h-[80%] w-[60%] mt-[5%]  backdrop-blur-sm flex flex-col justify-center items-center rounded-2xl border-2 borer-white py-5 "
+            >
+              <div className="h-[100%] w-[100%] flex flex-col justify-start items-center space-y-6 gap-[7%] py-[2.5%]">
+                <h2 className="sg-text text-4xl h-[20px] mb-[20px] text-white">
+                  REGISTER
+                </h2>
                 <input
                   type="text"
                   name="name"
                   placeholder="Name"
                   value={regformData.name}
                   onChange={handleInputChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2  border-indigo-500 text-white rounded-md "
                 />
                 <input
                   type="email"
@@ -122,8 +132,7 @@ function Login() {
                   placeholder="Email"
                   value={regformData.email}
                   onChange={handleInputChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-orange-500 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-indigo-500 text-white rounded-md "
                 />
                 <input
                   type="text"
@@ -131,8 +140,7 @@ function Login() {
                   placeholder="College Name"
                   value={regformData.collegeName}
                   onChange={handleInputChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-orange-500 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-indigo-500 text-white rounded-md "
                 />
                 <input
                   type="text"
@@ -140,8 +148,7 @@ function Login() {
                   placeholder="Contact Number"
                   value={regformData.contactNumber}
                   onChange={handleInputChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-orange-500 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-indigo-500 text-white rounded-md "
                 />
                 <input
                   type="password"
@@ -149,27 +156,37 @@ function Login() {
                   placeholder="Password"
                   value={regformData.password}
                   onChange={handleInputChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-orange-500 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-indigo-500 text-white rounded-md "
                 />
               </div>
-              <button type="submit" className='bg-red-600 h-[40px] w-[200px] rounded-3xl mb-[20px]'>Register</button>
-              <button onClick={toggleForm} className='toggle-button bg-blue-600 h-[40px] w-[200px] rounded-3xl '>
+              <button
+                type="submit"
+                className="bg-red-600 h-[40px] w-32 lg:w-[200px] rounded-3xl my-4 text-slate-50 ring-1 ring-slate-200  
+               lg:mb-[20px]"
+              >
+                Register
+              </button>
+              <button
+                onClick={toggleForm}
+                className="toggle-button bg-blue-600 h-[40px] w-32 lg:w-[200px] rounded-3xl text-slate-50 ring-1 ring-slate-200"
+              >
                 {isRegistering ? "Switch to Login" : "Switch to Register"}
               </button>
             </form>
           ) : (
-            <form onSubmit={handleLoginSubmit} className='h-[80%] w-[60%] mt-[5%]   flex flex-col justify-center items-center border-2 borer-white rounded-xl' >
-              <div className='h-[100%] w-[100%] flex flex-col justify-start gap-[5%] py-[2.5%] items-center'>
-                <h2 className=' text-4xl text-white'>Login</h2>
+            <form
+              onSubmit={handleLoginSubmit}
+              className="h-[80%] w-[60%] mt-[5%]     flex flex-col justify-center items-center border-2 borer-white rounded-xl py-4"
+            >
+              <div className="h-[100%] w-[100%] flex flex-col justify-start gap-[5%] py-[2.5%] items-center space-y-4 ">
+                <h2 className=" text-4xl sg-text text-white">LOGIN</h2>
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
                   value={loginFormData.email}
                   onChange={handleLoginChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-orange-500 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-indigo-500 text-white rounded-md "
                 />
                 <input
                   type="password"
@@ -177,18 +194,23 @@ function Login() {
                   placeholder="Password"
                   value={loginFormData.password}
                   onChange={handleLoginChange}
-                  className='h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-orange-500 text-white rounded-md '
-                  style={{ borderColor: 'rgb(255, 73, 16)' }}
+                  className="h-[2.5rem] w-[80%] px-[10px] bg-transparent border-2 border-indigo-500 text-white rounded-md "
                 />
               </div>
-              <button type="submit" className='bg-red-600 h-[40px] w-[200px] mb-[20px] rounded-3xl items-end'>Login</button>
-              <button onClick={toggleForm} className='toggle-button bg-blue-600 h-[40px] w-[200px] rounded-3xl '>
+              <button
+                type="submit"
+                className="bg-red-600 h-[40px] w-[150px] text-slate-50 lg:w-[200px] my-[20px] rounded-3xl items-end ring-1 ring-white"
+              >
+                Login
+              </button>
+              <button
+                onClick={toggleForm}
+                className="toggle-button bg-blue-600 text-slate-50 w-[150px] h-[40px] lg:w-[200px] rounded-3xl mb-[10px] ring-1 ring-white"
+              >
                 {isRegistering ? "Switch to Login" : "Switch to Register"}
               </button>
             </form>
           )}
-
-
         </div>
       </div>
     </div>
