@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "name": "Hackathlon",
+        "name": "Hackatron",
         "category": "Technical",
         "about": "A flagship hackathon challenging coders to solve real-life problems by developing innovative websites, apps, or desktop solutions.",
         "fee": 0,
         "date": "2024-10-18",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724520768/Hackathon_dvzado.png",
         "url": "",
         "contact": [
             {
@@ -48,7 +48,7 @@
         "about": "A high-intensity coding contest testing participants' logic, math, and algorithmic skills through complex problem statements.",
         "fee": 0,
         "date": "2024-10-18",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724520652/code_rush_cz4nxz.png",
         "url": "",
         "contact": [
             {
@@ -91,7 +91,7 @@
         "about": "A dynamic team-based event challenging participants to solve complex problems through innovation and creativity.",
         "fee": 0,
         "date": "2024-10-18",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724520650/ideathon_bpvng6.png",
         "url": "",
         "contact": [
             {
@@ -133,7 +133,7 @@
         "about": "An online cybersecurity competition where participants solve challenges to capture flags and accumulate points.",
         "fee": 0,
         "date": "2024-10-20",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724520859/CTF2_fneba5.png",
         "url": "",
         "contact": [
             {
