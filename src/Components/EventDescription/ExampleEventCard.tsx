@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Butt from "./EventCardButton.tsx"; // Assuming Button.tsx is in the same directory
 // import { CopyToClipboard } from "react-copy-to-clipboard";
 // import { v4 as uuidv4 } from "uuid";
@@ -31,7 +31,7 @@ interface EventCardProps {
 }
 
 const EventCard: React.FC<EventCardProps> = (props) => {
-  const [reg, setReg] = useState(false);
+  // const [reg, setReg] = useState(false);
 
   const months = [
     "Jan",
@@ -172,13 +172,13 @@ const EventCard: React.FC<EventCardProps> = (props) => {
         </div>
         <Butt title="Location" action={Location} />
 
-        {props.data.status === "closed" ? (
+        {/* {props.data.status === "closed" ? (
           <Butt title="Closed" />
         ) : reg ? (
           <Butt title="Submitted" />
-        ) : (
+        ) : ( */}
           <Butt title="Register" action={handleCreateTeamSubmit} />
-        )}
+        {/* )} */}
 
       </div>
     </div>

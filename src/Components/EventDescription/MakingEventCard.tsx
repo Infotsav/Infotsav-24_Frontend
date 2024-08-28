@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import AboutTab from "./AboutTab";
-import VenueTab from "./VenueTab";
-import TimeTab from "./TimeTab";
-import ContactTab from "./ContactTab";
-import Button from "./Button";
+// import AboutTab from "./AboutTab";
+// import VenueTab from "./VenueTab";
+// import TimeTab from "./TimeTab";
+// import ContactTab from "./ContactTab";
+// import Button from "./Button";
 import Butt from "./EventCardButton";
-import EventSlider from "./EventSlider";
+// import EventSlider from "./EventSlider";
 
 // Import event descriptions
 import TechnicalEvents from '../../constants/EventData/TechnicalEvents.json';
@@ -22,14 +22,14 @@ const eventsData: { [key: string]: any } = {
 };
 
 const MakingEventCard: React.FC = () => {
-  const [reg, setReg] = useState(false);
+//   const [reg, setReg] = useState(false);
   
-  const months = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-  ];
+//   const months = [
+//     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+//   ];
 
   const { category, id } = useParams<{ category: string; id: string }>();
-  const [activeTab, setActiveTab] = useState("about");
+//   const [activeTab, setActiveTab] = useState("about");
   const [eventDetails, setEventDetails] = useState<any>(null);
 
   useEffect(() => {
@@ -39,31 +39,31 @@ const MakingEventCard: React.FC = () => {
     }
   }, [category, id]);
 
-  const renderContent = () => {
-    if (!eventDetails) {
-      return <div>Loading...</div>;
-    }
+//   const renderContent = () => {
+//     if (!eventDetails) {
+//       return <div>Loading...</div>;
+//     }
 
-    switch (activeTab) {
-      case "about":
-        return <AboutTab about={eventDetails.about} />;
-      case "venue":
-        return <VenueTab venue={eventDetails.venue} />;
-      case "time":
-        return <TimeTab time={eventDetails.time} />;
-      case "contact":
-        return <ContactTab contacts={eventDetails.contact} />;
-      default:
-        return <AboutTab about={eventDetails.about} />;
-    }
-  };
+//     switch (activeTab) {
+//       case "about":
+//         return <AboutTab about={eventDetails.about} />;
+//       case "venue":
+//         return <VenueTab venue={eventDetails.venue} />;
+//       case "time":
+//         return <TimeTab time={eventDetails.time} />;
+//       case "contact":
+//         return <ContactTab contacts={eventDetails.contact} />;
+//       default:
+//         return <AboutTab about={eventDetails.about} />;
+//     }
+//   };
 
-  const tabs = [
-    { id: "about", label: "ABOUT" },
-    { id: "venue", label: "VENUE" },
-    { id: "time", label: "TIME" },
-    { id: "contact", label: "CONTACT" },
-  ];
+//   const tabs = [
+//     { id: "about", label: "ABOUT" },
+//     { id: "venue", label: "VENUE" },
+//     { id: "time", label: "TIME" },
+//     { id: "contact", label: "CONTACT" },
+//   ];
 
   return (
     <section className="min-h-screen flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-10 bg-none">
