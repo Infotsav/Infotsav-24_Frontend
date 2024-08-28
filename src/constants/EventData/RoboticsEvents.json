@@ -10,14 +10,14 @@
         "url": "",
         "contact": [
             {
-                "name": "John Smith",
-                "phone": "9876543212",
-                "email": "john.smith@example.com"
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             },
             {
-                "name": "Alice Johnson",
-                "phone": "9876543213",
-                "email": "alice.johnson@example.com"
+                "name": "Kiran Meena",
+                "phone":"9079789957",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -93,14 +93,14 @@
         "url": "",
         "contact": [
             {
-                "name": "Jane Doe",
-                "phone": "9876543210",
-                "email": "jane.doe@example.com"
+                "name": "Uajjaw",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             },
             {
-                "name": "Bob Brown",
-                "phone": "9876543211",
-                "email": "bob.brown@example.com"
+                "name": "Snehal Prakash Chaudhari",
+                "phone":"9172828839",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -172,18 +172,13 @@
         "about": "A challenging event where participants create and pilot self-made drones through a complex, obstacle-filled course testing agility, control, and durability.",
         "fee": 0,
         "date": "2024-10-21",
-        "img": "",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724880079/droneshot_aeqnwb.png",
         "url": "",
         "contact": [
             {
-                "name": "Alice Green",
-                "phone": "9876543212",
-                "email": "alice.green@example.com"
-            },
-            {
-                "name": "Charlie White",
-                "phone": "9876543213",
-                "email": "charlie.white@example.com"
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -226,14 +221,19 @@
         "url": "",
         "contact": [
             {
-                "name": "John Doe",
-                "phone": "9876543210",
-                "email": "john.doe@example.com"
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             },
             {
-                "name": "Jane Smith",
-                "phone": "9876543211",
-                "email": "jane.smith@example.com"
+                "name": "Anisha Khairnar",
+                "phone": "7387797094",
+                "email": "events@infotsav.in"
+            },
+            {
+                "name": "Rohit Kumawat",
+                "phone": "9130660628",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {

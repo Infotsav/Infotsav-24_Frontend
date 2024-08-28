@@ -10,9 +10,9 @@
         "url": "",
         "contact": [
             {
-                "name": "Nick Jon",
-                "phone": "9999999999",
-                "email": "nick.jon@example.com"
+                "name": "Prasun Baranwal",
+                "phone": "7860967828" ,
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -61,14 +61,9 @@
         "img":"https://res.cloudinary.com/dih6gwkau/image/upload/v1724434509/blogathon_ntqjnj.jpg",
         "contact": [
             {
-                "name": "John Doe",
-                "phone": "9876543210",
-                "email": ""
-            },
-            {
-                "name": "Jane Doe",
-                "phone": "9876543210",
-                "email": ""
+                "name": "Aniket",
+                "phone": "7780366881",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -114,14 +109,9 @@
         "img":"https://res.cloudinary.com/dih6gwkau/image/upload/v1724434485/music_album_hqqzaq.jpg",
         "contact": [
             {
-                "name": "Chris Evans",
-                "phone": "9876543213",
-                "email": "chris@example.com"
-            },
-            {
-                "name": "Natalie Portman",
-                "phone": "9876543214",
-                "email": "natalie@example.com"
+                "name": "Kanika Singhal",
+                "phone": "9319883231",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -149,7 +139,7 @@
             ],
             "event_structure": {
                 "mode": "Online",
-                "results_announcement": "Winners announced on the techfest day.",
+                "results_announcement": "Winners announced in the Infotsav'24.",
                 "prizes": "Top 3 designs receive certificates and prizes. Special mentions for categories like 'Most Creative Design' and 'Best Use of Software.'",
                 "anonymity": "Use an identifier code provided by organizers instead of participant names."
             }

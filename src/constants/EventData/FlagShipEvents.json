@@ -11,12 +11,12 @@
             {
                 "name": "John Doe",
                 "phone": "9876543210",
-                "email": ""
+                "email": "events@infotsav.in"
             },
             {
                 "name": "Jane Doe",
                 "phone": "9876543210",
-                "email": ""
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -60,12 +60,12 @@
             {
                 "name": "John Smith",
                 "phone": "9876543212",
-                "email": "john.smith@example.com"
+                "email": "events@infotsav.in"
             },
             {
                 "name": "Alice Johnson",
                 "phone": "9876543213",
-                "email": "alice.johnson@example.com"
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -145,7 +145,7 @@
             {
                 "name": "Event Coordinator",
                 "phone": "1234567890",
-                "email": "{custom mail}"
+                "email": "events@infotsav.in"
             }
         ],
         "description": {

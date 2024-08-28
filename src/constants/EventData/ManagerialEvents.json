@@ -3,7 +3,7 @@
         "id": 12,
         "name": "Pinnacle",
         "category": "Managerial",
-        "about": "If you have a unique idea that sets you on the path to becoming a successful entrepreneur, then Pinnacle is the event for you. As one of the most prestigious events of Infotsav, Pinnacle provides a platform for innovative ideas, offering the spark needed to ignite entrepreneurial success. This flagship event of Infotsav'19 attracts students from the best B-schools and engineering colleges across the country.",
+        "about": "If you have a unique idea that sets you on the path to becoming a successful entrepreneur, then Pinnacle is the event for you. As one of the most prestigious events of Infotsav, Pinnacle provides a platform for innovative ideas, offering the spark needed to ignite entrepreneurial success. This flagship event of Infotsav'24 attracts students from the best B-schools and engineering colleges across the country.",
         "fee": {
             "phase_1": 0,
             "phase_2": "{fees}"
@@ -13,10 +13,21 @@
         "url": "",
         "contact": [
             {
-                "name": "Event Coordinator",
-                "phone": "1234567890",
-                "email": "{custom mail}"
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
+            },
+            {
+                "name": "Sambodhi Roy",
+                "phone": "7439811569",
+                "email": "events@infotsav.in"
+            },
+            {
+                "name": "Bhudev Bhanpuriya",
+                "phone": "8823085185",
+                "email": "events@infotsav.in"
             }
+
         ],
         "description": {
             "overview": "Pinnacle is a premier event where teams present their innovative business ideas to a panel of judges. The event is split into two phases: an online submission of an executive summary and an on-campus presentation of the final business plans.",
@@ -62,9 +73,9 @@
         "url": "",
         "contact": [
             {
-                "name": "Event Coordinator",
-                "phone": "1234567890",
-                "email": "{custom_email}"
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {

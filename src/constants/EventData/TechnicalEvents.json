@@ -10,14 +10,14 @@
         "url": "",
         "contact": [
             {
-                "name": "John Doe",
-                "phone": "9876543210",
-                "email": ""
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             },
             {
-                "name": "Jane Doe",
-                "phone": "9876543210",
-                "email": ""
+                "name": "Kunal Vardani",
+                "phone": "9929646997",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -52,14 +52,14 @@
         "url": "",
         "contact": [
             {
-                "name": "John Doe",
-                "phone": "9876543210",
-                "email": ""
+                "name": "Ayush Shah",
+                "phone": "6002969689",
+                "email": "events@infotsav.in"
             },
             {
-                "name": "Jane Doe",
-                "phone": "9876543210",
-                "email": ""
+                "name": "Rishabh Agarwal",
+                "phone": "9163430474",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -95,14 +95,14 @@
         "url": "",
         "contact": [
             {
-                "name": "John Doe",
-                "phone": "9876543210",
-                "email": ""
+                "name": "Aditya Kumar Singh",
+                "phone": "8303660725",
+                "email": "events@infotsav.in"
             },
-            {
-                "name": "Jane Doe",
-                "phone": "9876543210",
-                "email": ""
+             {
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
@@ -137,14 +137,14 @@
         "url": "",
         "contact": [
             {
-                "name": "John Doe",
-                "phone": "9876543210",
-                "email": "john.doe@example.com"
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
             },
             {
-                "name": "Jane Doe",
-                "phone": "9876543211",
-                "email": "jane.doe@example.com"
+                "name": "Rohit Kumawat",
+                "phone": "9130660628",
+                "email": "events@infotsav.in"
             }
         ],
         "description": {
