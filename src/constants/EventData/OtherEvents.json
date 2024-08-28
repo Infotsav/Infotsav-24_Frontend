@@ -8,6 +8,7 @@
         "date": "2024-09-20",
         "img": "",
         "url": "",
+        "prize": "4k",
         "contact": [
             {
                 "name": "Prasun Baranwal",
@@ -58,6 +59,7 @@
         "fee": 100,
         "date": "2024-10-18",
         "url": "",
+        "prize": "3k",
         "img":"https://res.cloudinary.com/dih6gwkau/image/upload/v1724434509/blogathon_ntqjnj.jpg",
         "contact": [
             {
@@ -106,6 +108,7 @@
         "fee": 0,
         "date": "2024-09-15",
         "url": "",
+        "prize": "2k",
         "img":"https://res.cloudinary.com/dih6gwkau/image/upload/v1724434485/music_album_hqqzaq.jpg",
         "contact": [
             {

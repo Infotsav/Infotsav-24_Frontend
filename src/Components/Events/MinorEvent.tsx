@@ -11,6 +11,7 @@ type EventType = {
   category: string;
   id: number;
   img: string;
+  prize: string;
 };
 
 interface MinorEventProps {
@@ -54,6 +55,7 @@ export default function MinorEvent({ category }: MinorEventProps) {
               about={event.about}
               category={category}
               img={event.img}
+              prize={event.prize}
             />
           ))}
         </div>
@@ -68,10 +70,11 @@ interface EventBoxProps {
   about: string;
   category?: string;
   img:string;
+  prize:string;
 }
 
 
-export function EventBox({ name, id, about, category, img }: EventBoxProps) {
+export function EventBox({ name, id, about, category, img , prize}: EventBoxProps) {
   const navigate = useNavigate();
   return (
     <div className={`overflow-hidden aspect-square relative hover:transition-all group rounded-lg max-h-auto border border-slate-500 mx-auto bg-cover bg-center  backdrop-filter`}
@@ -80,8 +83,8 @@ export function EventBox({ name, id, about, category, img }: EventBoxProps) {
       <div className="h-full lg:p-6 p-2 group-hover:backdrop-blur-sm transition-all duration-500 ease-in-out bg-black bg-opacity-30">
 
         <div className="h-full flex flex-col justify-between group-hover:h-1/3 transition-all duration-500 ease-in-out">
-          <div className="text-slate-50 transition-all duration-500 ease-in-out z-10 group-hover:lg:text-2xl lg:text-3xl md:text-3xl group-hover:md:text-2xl text-3xl group-hover:text-2xl">
-            Prizes worth 60k
+          <div className="text-slate-50 font-pixelhugger transition-all duration-500 ease-in-out z-10 group-hover:lg:text-2xl lg:text-3xl md:text-3xl group-hover:md:text-2xl text-3xl group-hover:text-2xl">
+            Prizes worth {prize}
           </div>
           <div className="group-hover:lg:text-2xl lg:text-3xl md:text-4xl group-hover:md:text-3xl text-3xl group-hover:text-2xl transition-all duration-500 ease-in-out">
             {name}

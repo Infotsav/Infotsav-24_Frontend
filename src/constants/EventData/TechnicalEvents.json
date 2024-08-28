@@ -8,6 +8,7 @@
         "date": "2024-10-18",
         "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724521794/Hackathon_sx1laa.png",
         "url": "",
+        "prize": "65k",
         "contact": [
             {
                 "name": "Uajjawal Sharma",
@@ -45,11 +46,12 @@
         "id": 3,
         "name": "Code Rush",
         "category": "Technical",
-        "about": "A high-intensity coding contest testing participants' logic, math, and algorithmic skills through complex problem statements.",
+        "about": "A high-intensity coding contest testing participants logic, math, and algorithmic skills through complex problem statements.",
         "fee": 0,
         "date": "2024-10-18",
         "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724520652/code_rush_cz4nxz.png",
         "url": "",
+        "prize": "25k",
         "contact": [
             {
                 "name": "Ayush Shah",
@@ -63,7 +65,7 @@
             }
         ],
         "description": {
-            "overview": "Code Rush is a challenging coding contest that tests participants' skills...",
+            "overview": "Code Rush is a challenging coding contest that tests participants skills...",
             "objective": "Write a program to solve the given problem statements...",
             "team_composition": {
                 "team_size": "Each team can have up to 3 members.",
@@ -93,6 +95,7 @@
         "date": "2024-10-18",
         "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724521794/ideathon_lk0rsl.png",
         "url": "",
+        "prize": "15k",
         "contact": [
             {
                 "name": "Aditya Kumar Singh",
@@ -135,6 +138,7 @@
         "date": "2024-10-20",
         "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724520859/CTF2_fneba5.png",
         "url": "",
+        "prize": "15k",
         "contact": [
             {
                 "name": "Uajjawal Sharma",

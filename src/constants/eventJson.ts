@@ -8,6 +8,7 @@ export const eventsJson =  [
         "date": "2024-10-18",
         "img": "",
         "url" : "",
+        "prize": "65k",
         "contact": [
             {
                 "name": "John Doe",
@@ -58,6 +59,7 @@ export const eventsJson =  [
         "date": "2024-10-18",
         "img": "",
         "url" : "",
+        "prize": "25k",
         "contact": [
             {
                 "name": "John Doe",
@@ -109,6 +111,7 @@ export const eventsJson =  [
         "date": "2024-10-18",
         "img": "",
         "url" : "",
+        "prize": "15k",
         "contact": [
             {
                 "name": "John Doe",
@@ -158,6 +161,7 @@ export const eventsJson =  [
         "date": "2024-10-20",
         "img": "",
         "url" : "",
+        "prize": "15k",
         "contact": [
             {
                 "name": "John Doe",
@@ -207,6 +211,7 @@ export const eventsJson =  [
         "date": "2024-10-20",
         "img": "",
         "url" : "",
+        "prize": "65k",
         "contact": [
             {
                 "name": "John Smith",
@@ -290,6 +295,7 @@ export const eventsJson =  [
         "date": "2024-10-20",
         "img": "",
         "url" : "",
+        "prize": "40k",
         "contact": [
             {
                 "name": "Jane Doe",
@@ -373,6 +379,7 @@ export const eventsJson =  [
         "date": "2024-10-21",
         "img": "",
         "url" : "",
+        "prize": "25k",
         "contact": [
             {
                 "name": "Alice Green",
@@ -423,6 +430,7 @@ export const eventsJson =  [
         "date": "2024-10-22",
         "img": "",
         "url" : "",
+        "prize": "15k",
         "contact": [
             {
                 "name": "John Doe",
@@ -490,6 +498,7 @@ export const eventsJson =  [
         "date": "2024-10-23",
         "img": "",
         "url" : "",
+        "prize": "40k",
         "contact": [
             {
                 "name": "Event Coordinator",
@@ -539,6 +548,7 @@ export const eventsJson =  [
         "date": "2024-10-25",
         "img": "",
         "url" : "",
+        "prize": "15k",
         "contact": [
             {
                 "name": "Event Coordinator",

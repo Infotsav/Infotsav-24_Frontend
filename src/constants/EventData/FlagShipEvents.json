@@ -1,12 +1,13 @@
 [
     {
         "id": 1,
-        "name": "Hackathlon",
+        "name": "Hackatron",
         "category": "Technical",
         "about": "A flagship hackathon challenging coders to solve real-life problems by developing innovative websites, apps, or desktop solutions.",
         "fee": 0,
         "date": "2024-10-18",
-        "img": "",
+        "prize": "60k",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724882920/Hackathon_banner_zyetj3.webp",
         "contact": [
             {
                 "name": "John Doe",
@@ -50,12 +51,13 @@
     },
     {
         "id": 7,
-        "name": "Mega Robo War",
+        "name": "RoboWars",
         "category": "Robotics",
         "about": "A battle where powerful robots face off in an arena, aiming to overpower their opponent within a fixed time duration.",
         "fee": 0,
         "date": "2024-10-20",
-        "img": "",
+        "prize": "65k",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724883946/robowars_banner_with_bgc_s8epe2.png",
         "contact": [
             {
                 "name": "John Smith",
@@ -140,7 +142,8 @@
             "phase_2": "{fees}"
         },
         "date": "2024-10-23",
-        "img": "",
+        "prize": "40k",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1724882916/pinnacle_banner_b4qn4s.webp",
         "contact": [
             {
                 "name": "Event Coordinator",
@@ -157,7 +160,7 @@
                 "There is no limit on the number of teams per college."
             ],
             "team_specifications": [
-                "Teams may consist of 1 to 3 members.",
+                "Teams may consist of 1 to 4 members.",
                 "Cross-institute/organization teams are allowed.",
                 "Each team must have a designated presenter."
             ],

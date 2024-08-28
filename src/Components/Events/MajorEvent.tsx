@@ -22,7 +22,7 @@ export default function MajorEvent() {
         {FlagshipEvents.map((event) => (
           <div
             key={event.id}
-            className="overflow-hidden relative hover:transition-all group w-9/12 rounded-lg max-h-auto h-[470px]   border-2 border-slate-500 mx-auto grayscale  backdrop-filter"
+            className="object-top overflow-hidden relative hover:transition-all group w-9/12 rounded-lg max-h-auto h-[550px]   border-2 border-slate-500 mx-auto hue-rotate-60 backdrop-filter"
 
           >
             <div
@@ -34,7 +34,6 @@ export default function MajorEvent() {
               <div className="h-full flex flex-col justify-between group-hover:h-1/2 transition-all duration-500 ease-in-out">
 
                 <div className="text-slate-50 z-10 group-hover:lg:text-5xl lg:text-6xl md:text-4xl text-3xl transition-all duration-500 ease-in-out pt-4 pl-5">
-                  Prizes worth 1 lakh
                 </div>
                 <div className="group-hover:lg:text-5xl lg:text-6xl md:text-4xl text-3xl transition-all duration-500 ease-in-out pb-4 pl-5">
                   {event.name}
@@ -51,7 +50,7 @@ export default function MajorEvent() {
                   <button
                     type="button"
                     className="w-fit bg-black hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 my-2 ring-1 ring-slate-50"
-                    onClick={() => navigate(`/eventdetails/flagship/${event.id}`)}
+                    onClick={() => navigate(`/eventdetails/${event.category}/${event.id}`)}
                   >
                     View Details
                   </button>
