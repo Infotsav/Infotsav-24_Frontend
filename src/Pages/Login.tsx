@@ -1,6 +1,9 @@
 import { useState } from "react";
 import ParticlesBackground from "../Components/ParticlesBackground";
-
+import { auth, db } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc, query, where, getDocs, collection } from "firebase/firestore";
+import { signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 function Login() {
   const [isRegistering, setIsRegistering] = useState(true);
 
@@ -18,39 +21,56 @@ function Login() {
   });
 
   const handleRegistrationSubmit = async (e: any) => {
+
     e.preventDefault();
+    const { name, email, collegeName, contactNumber, password } = regformData;
 
-    const regData = {
-      username: regformData.name,
-      email: regformData.email,
-      collegeName: regformData.collegeName,
-      contactNumber: regformData.contactNumber,
-      password: regformData.password,
-    };
-    const response = await fetch(
-      "http://localhost:8000/api/v1/ambassador/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(regData),
-      }
-    );
-    console.log(regData);
-
-    const data = await response.json();
-    // data contains name,token,referral_id same them in local storge and use them in the app
-    console.log(data);
-    if (data.token) {
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("referralId", data.referralNumber);
-      localStorage.setItem("name", data.username);
-      console.log("Registration successful");
-    } else {
-      console.log("Registration failed");
+    if (!name || !email || !collegeName || !contactNumber || !password) {
+      alert("Please fill in all fields.");
+      return;
     }
-    window.location.reload();
+
+    try {
+      // Check if the user is already registered in Firestore
+      const usersRef = collection(db, "users");
+      const q = query(usersRef, where("email", "==", email));
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        alert("You are already a member. Kindly log in.");
+        setIsRegistering(!isRegistering);
+        return;
+      }
+
+      // Create a new user in Firebase Authentication
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Send verification email
+      await sendEmailVerification(user);
+
+      // Store additional user information in Firestore
+      await setDoc(doc(db, "users", user.uid), {
+        name,
+        email,
+        collegeName,
+        contactNumber,
+        createdAt: new Date(),
+      });
+
+      alert("Registration successful! Please check your email to verify your account.");
+
+      setRegFormData({
+        name: "",
+        email: "",
+        collegeName: "",
+        contactNumber: "",
+        password: "",
+      });
+    } catch (error) {
+      console.error("Error during registration:", error);
+      alert("Registration failed. Please try again.");
+    }
   };
 
   const handleInputChange = (e: any) => {
@@ -62,34 +82,36 @@ function Login() {
 
   const handleLoginSubmit = async (e: any) => {
     e.preventDefault();
+    const { email, password } = loginFormData;
 
-    const token = localStorage.getItem("token");
-
-    const response = await fetch(
-      "http://localhost:8000/api/v1/ambassador/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-        },
-        body: JSON.stringify(loginFormData),
-      }
-    );
-
-    const data = await response.json();
-    // console.log(data);
-    if (data.token) {
-      // If the login is successful and a new token is received, update the token in localStorage
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("referralId", data.referralNumber);
-      localStorage.setItem("name", data.username);
-      console.log("Login successful");
-    } else {
-      console.log("Login failed");
+    if (!email || !password) {
+      alert("Please enter both email and password.");
+      return;
     }
 
-    window.location.reload();
+    try {
+      
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+    
+      if (!user.emailVerified) {
+
+        alert("Please verify your email before logging in.");
+        await auth.signOut(); 
+        return;
+      }
+
+      alert("Login successful!");
+      setLoginFormData({
+        email: "",
+        password: "",
+      });
+
+    } catch (error) {
+      console.error("Error during login:", error);
+      alert("Login failed. Please check your email and password.");
+    }
   };
 
   const handleLoginChange = (e: any) => {
