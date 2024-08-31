@@ -3,11 +3,14 @@ import ParticlesBackground from "../Components/ParticlesBackground";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { DocumentData } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
     const [userData, setUserData] = useState<DocumentData | null>(null);
     const [loading, setLoading] = useState(true);
     const [firstName, setFirstName] = useState<string>("");
+
+    const navigate = useNavigate();
 
     async function getUserdata() {
         const uid = localStorage.getItem("userID");
@@ -39,6 +42,10 @@ function Dashboard() {
         } finally {
             setLoading(false);
         }
+    }
+
+    if (!loading && !userData) {
+        navigate("/");
     }
 
     useEffect(() => {
