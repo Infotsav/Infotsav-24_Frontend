@@ -1,17 +1,21 @@
 import { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function UserProfile() {
+    const Navigator = useNavigate();
     const [showDialog, setShowDialog] = useState(false);
     // const navigate = useNavigate();
 
     const toggleDialog = () => {
         setShowDialog(!showDialog);
+        Navigator("/dashboard");
     };
 
     const handleLogout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem("userID");
         console.log("lpgegd out")
         window.location.reload();
     };

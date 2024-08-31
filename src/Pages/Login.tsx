@@ -4,9 +4,12 @@ import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc, query, where, getDocs, collection } from "firebase/firestore";
 import { signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
+
 function Login() {
   const [isRegistering, setIsRegistering] = useState(true);
-
+  const Navigator = useNavigate();
   const [regformData, setRegFormData] = useState({
     name: "",
     email: "",
@@ -50,6 +53,7 @@ function Login() {
       await sendEmailVerification(user);
 
       // Store additional user information in Firestore
+      localStorage.setItem("userID", user.uid);
       await setDoc(doc(db, "users", user.uid), {
         name,
         email,
@@ -103,6 +107,13 @@ function Login() {
       }
 
       alert("Login successful!");
+      console.log(user);
+
+      localStorage.setItem("userID", user.uid);
+      localStorage.setItem("token", user.uid);
+      window.location.reload();
+      
+
       setLoginFormData({
         email: "",
         password: "",
