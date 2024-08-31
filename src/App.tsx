@@ -12,6 +12,7 @@ import MeetTheTeam from './Pages/MeetTheTeam';
 import Sponsors from './Pages/Sponsors';
 import NotFound from './Pages/NotFound';
 import EventDetails from './Pages/EventDetails.tsx';
+import Dashboard from './Pages/Dashboard.tsx';
 
 import "./App.css"
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/eventdetails/:category/:id" element={<EventDetails />} />
           <Route path="/register" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/meet-the-team" element={<MeetTheTeam />} />
           <Route path="/sponsors" element={<Sponsors />} />
         </Route>
