@@ -20,7 +20,7 @@ function UserProfile() {
         window.location.reload();
     };
 
-    // const referralId = localStorage.getItem("referralId");
+    const referralId = localStorage.getItem("referralId");
 
     return (
         <div className="relative">
@@ -31,12 +31,12 @@ function UserProfile() {
             </div>
             {showDialog && (
                 <div className="absolute right-0 top-full mt-2 w-[250px] p-4 bg-white border rounded-lg shadow-lg z-10">
-                    {/* <div className="mb-4">
+                    <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2">
                             Referral ID Testing:
                         </label>
                         <div>{referralId || "Not available"}</div>
-                    </div> */}
+                    </div>
                     <button
                         onClick={handleLogout}
                         className="bg-red-600 w-full py-2 text-white rounded-md">

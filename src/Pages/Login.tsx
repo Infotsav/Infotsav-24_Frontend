@@ -143,26 +143,6 @@ function Login() {
             alert("Login successful!");
             console.log("This is the UserData: ", user.uid);
 
-            const docRef = doc(db, "users", user.uid);
-
-            try {
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    const data1 = docSnap.data();
-                    // setData(data1);
-
-                    console.log(
-                        "Refference Code:-",
-                        data1.refCode ? data1.refCode : "Not there"
-                    );
-                    alert("check!");
-                } else {
-                    console.log("No such document!");
-                }
-            } catch (error) {
-                console.error("Error fetching document:", error);
-            }
-
             localStorage.setItem("userID", user.uid);
             localStorage.setItem("token", user.uid);
             window.location.reload();
