@@ -5,9 +5,9 @@ import { db } from "../firebase";
 import { DocumentData } from "firebase/firestore";
 
 function Dashboard() {
-
     const [userData, setUserData] = useState<DocumentData | null>(null);
     const [loading, setLoading] = useState(true);
+    const [firstName, setFirstName] = useState<string>("");
 
     async function getUserdata() {
         const uid = localStorage.getItem("userID");
@@ -23,7 +23,14 @@ function Dashboard() {
         try {
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
-                setUserData(docSnap.data());
+                const data = docSnap.data();
+                setUserData(data);
+
+                // Extract the first name
+                if (data.name) {
+                    const nameParts = data.name.split(" ");
+                    setFirstName(nameParts[0]);
+                }
             } else {
                 console.log("No such document!");
             }
@@ -38,8 +45,30 @@ function Dashboard() {
         getUserdata();
     }, []);
 
+    const handleReferralClick = (): void => {
+        const textToCopy =
+            document.getElementById("referral-text-box")?.innerText;
+
+        if (textToCopy) {
+            navigator.clipboard
+                .writeText(textToCopy)
+                .then(() => {
+                    alert("Referral ID copied to clipboard!");
+                })
+                .catch((err: any) => {
+                    console.error("Failed to copy: ", err);
+                });
+        } else {
+            console.error("No text found to copy.");
+        }
+    };
+
     if (loading) {
-        return <div className="flex items-center justify-center min-h-screen text-white">Loading...</div>;
+        return (
+            <div className="flex items-center justify-center min-h-screen text-white">
+                Loading...
+            </div>
+        );
     }
 
     return (
@@ -48,18 +77,66 @@ function Dashboard() {
                 <div className=" relative z-[-1] w-full max-w-lg">
                     <ParticlesBackground />
                 </div>
-                <div className=" w-full h-full  bg-opacity-80 p-6 rounded-lg shadow-lg mt-4 sm:mt-6">
+                <div className="w-full h-full bg-opacity-80 p-6 rounded-lg shadow-lg mt-4 sm:mt-6">
                     {userData ? (
                         <div className="h-full w-full text-center">
-                            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-red-600">Welcome, {userData.name || "User"}!</h1>
-                            <div className="text-left space-y-2 h-full w-full flex justify-evenly items-start flex-col text-xl">
-                                <p><span className="font-semibold text-red-600"><b>Email</b>:</span> {userData.email || "N/A"}</p>
-                                <p><span className="font-semibold text-red-600"><b>Contact</b></span> {userData.contactNumber || "N/A"}</p>
-                                <p><span className="font-semibold text-red-600"><b>College Name</b> :</span> {userData.collegeName || "N/A"}</p>
+                            <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400 bg-opacity-50">
+                                Welcome, {firstName}!
+                            </h1>
+                            <div className="flex justify-center py-12 overflow-clip">
+                                <div className="flex justify-center items-center bg-gray-500/[0.24] rounded-3xl border-2 border-orange-700/[0.70] p-6 shadow-lg max-w-md w-full">
+                                    <div className="text-left space-y-4 h-full w-full text-xl flex-col">
+                                        <p className="flex items-center flex-initial ">
+                                            <span className="text-left text-gray-300 mr-2 ">
+                                                Email:
+                                            </span>
+                                            <span className="text-gray-400 ">
+                                                {userData.email || "N/A"}
+                                            </span>
+                                        </p>
+                                        <p className="flex items-center">
+                                            <span className="text-gray-300 mr-2 ">
+                                                Contact:
+                                            </span>
+                                            <span className="text-gray-400">
+                                                {userData.contactNumber ||
+                                                    "N/A"}
+                                            </span>
+                                        </p>
+                                        <p className="flex items-center sm:flex-auto">
+                                            <span className="text-gray-300 mr-2">
+                                                College Name:
+                                            </span>
+                                            <span className="text-gray-400">
+                                                {userData.collegeName || "N/A"}
+                                            </span>
+                                        </p>
+                                        <p className="flex items-center sm:flex-auto">
+                                            <span className="text-gray-300 mr-2">
+                                                Referral ID:
+                                            </span>
+                                            <span
+                                                id="referral-text-box"
+                                                className="text-gray-400">
+                                                {userData.refCode
+                                                    ? userData.refCode
+                                                    : "NOT-AVALIABLE-REFERALCODE"}
+                                            </span>
+                                            <span
+                                                onClick={handleReferralClick}
+                                                className="cursor-pointer text-blue-500 hover:text-blue-700 ml-4"
+                                                title="Copy Referral ID">
+                                                ⎙
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ) : (
-                        <p className="text-center text-red-400">No user data available</p>
+                        <p className="text-center text-red-400">
+                            No user data available
+                        </p>
                     )}
                 </div>
             </section>
