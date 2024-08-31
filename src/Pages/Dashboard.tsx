@@ -91,7 +91,7 @@ function Dashboard() {
                                                 Email:
                                             </span>
                                             <span className="text-gray-400 ">
-                                                {userData.email || "N/A"}
+                                                {userData?.email || "N/A"}
                                             </span>
                                         </p>
                                         <p className="flex items-center">
@@ -99,7 +99,7 @@ function Dashboard() {
                                                 Contact:
                                             </span>
                                             <span className="text-gray-400">
-                                                {userData.contactNumber ||
+                                                {userData?.contactNumber ||
                                                     "N/A"}
                                             </span>
                                         </p>
@@ -108,7 +108,7 @@ function Dashboard() {
                                                 College Name:
                                             </span>
                                             <span className="text-gray-400">
-                                                {userData.collegeName || "N/A"}
+                                                {userData?.collegeName || "N/A"}
                                             </span>
                                         </p>
                                         <p className="flex items-center sm:flex-auto">
@@ -118,8 +118,8 @@ function Dashboard() {
                                             <span
                                                 id="referral-text-box"
                                                 className="text-gray-400">
-                                                {userData.refCode
-                                                    ? userData.refCode
+                                                {userData?.refCode
+                                                    ? userData?.refCode
                                                     : "NOT-AVALIABLE-REFERALCODE"}
                                             </span>
                                             <span

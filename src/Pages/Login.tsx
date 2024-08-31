@@ -8,14 +8,12 @@ import {
     query,
     where,
     getDocs,
-    getDoc,
     collection,
 } from "firebase/firestore";
 import {
     signInWithEmailAndPassword,
     sendEmailVerification,
 } from "firebase/auth";
-// import { useNavigate } from "react-router-dom";
 
 function referralGenerate(name: string, contactNumber: string): string {
     const firstFourLettersOfName = name.slice(0, 4).toUpperCase();
@@ -35,7 +33,7 @@ function Login() {
         password: "",
     });
 
-    const [refCode, setRefCode] = useState<string>("");
+    // const [refCode, setRefCode] = useState<string>("");
 
     const [loginFormData, setLoginFormData] = useState({
         email: "",
@@ -78,8 +76,8 @@ function Login() {
             // Setting the Refferal code
             const reffereal: string = referralGenerate(email, contactNumber);
             console.log("refferal code Saved:- ", reffereal);
-            setRefCode(reffereal);
-            console.log("checking the usestate Ref: ", refCode);
+            // setRefCode(reffereal);
+            // console.log("checking the usestate Ref: ", refCode);
 
             // Store additional user information in Firestore
             localStorage.setItem("userID", user.uid);
@@ -88,7 +86,7 @@ function Login() {
                 email,
                 collegeName,
                 contactNumber,
-                refCode,
+                refCode: reffereal,
                 createdAt: new Date(),
             });
             console.log("RESULT", res, "shjdgbfvdjgj");
@@ -142,26 +140,6 @@ function Login() {
 
             alert("Login successful!");
             console.log("This is the UserData: ", user.uid);
-
-            const docRef = doc(db, "users", user.uid);
-
-            try {
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    const data1 = docSnap.data();
-                    // setData(data1);
-
-                    console.log(
-                        "Refference Code:-",
-                        data1.refCode ? data1.refCode : "Not there"
-                    );
-                    // alert("check!");
-                } else {
-                    console.log("No such document!");
-                }
-            } catch (error) {
-                console.error("Error fetching document:", error);
-            }
 
             localStorage.setItem("userID", user.uid);
             localStorage.setItem("token", user.uid);
