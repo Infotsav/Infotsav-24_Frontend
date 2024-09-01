@@ -94,7 +94,7 @@ function Dashboard() {
                 <div className="w-full h-full bg-opacity-80 p-6 rounded-lg shadow-lg mt-4 sm:mt-6">
                     {userData ? (
                         <div className="h-full w-full text-center">
-                            <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400 bg-opacity-50 font-pixelhugger">
+                            <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-mono font-bold bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400 bg-opacity-50">
                                 Welcome, {firstName}!
                             </h1>
                             <div className="flex justify-center py-12 overflow-clip">
