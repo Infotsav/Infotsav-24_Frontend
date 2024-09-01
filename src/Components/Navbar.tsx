@@ -2,17 +2,23 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Hamburger from "../assets/hamburger-icon.png";
 import { ArrowUpRight } from "lucide-react";
-import UserDialogue from "./User/UserDialogue";
+import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
     const navigate = useNavigate();
     const location = useLocation();
     const [menuClick, setMenuClick] = useState(false);
+    const [showDialog, setShowDialog] = useState(false);
 
     const handleClickOutside = (event: any) => {
         if (menuClick && !event.target.closest(".menu-container")) {
             setMenuClick(false);
         }
+    };
+
+    const toggleDialog = () => {
+        setShowDialog(!showDialog);
+        navigate("/dashboard");
     };
 
     const [token, setToken] = useState<string | null>(null);
@@ -60,7 +66,11 @@ function Navbar() {
 
                 <div>
                     {token ? (
-                        <UserDialogue />
+                        <div
+                            onClick={toggleDialog}
+                            className="cursor-pointer h-[50px] w-[50px] rounded-full flex justify-center items-center bg-gray-200">
+                            <FaUserCircle size={40} />
+                        </div>
                     ) : (
                         <button
                             onClick={() => navigate("/register")}

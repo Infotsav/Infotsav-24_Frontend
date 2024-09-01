@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ParticlesBackground from "../Components/ParticlesBackground";
 import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -14,6 +14,7 @@ import {
     signInWithEmailAndPassword,
     sendEmailVerification,
 } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function referralGenerate(name: string, contactNumber: string): string {
     const firstFourLettersOfName = name.slice(0, 4).toUpperCase();
@@ -24,7 +25,7 @@ function referralGenerate(name: string, contactNumber: string): string {
 
 function Login() {
     const [isRegistering, setIsRegistering] = useState(true);
-    // const Navigator = useNavigate();
+    const Navigator = useNavigate();
     const [regformData, setRegFormData] = useState({
         name: "",
         email: "",
@@ -32,6 +33,16 @@ function Login() {
         contactNumber: "",
         password: "",
     });
+    const [token, setToken] = useState<string | null>(null);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        setToken(token);
+    }, []);
+
+    if (token) {
+        Navigator("/dashboard");
+    }
 
     // const [refCode, setRefCode] = useState<string>("");
 
@@ -140,15 +151,13 @@ function Login() {
 
             alert("Login successful!");
             console.log("This is the UserData: ", user.uid);
-
             localStorage.setItem("userID", user.uid);
             localStorage.setItem("token", user.uid);
-            window.location.reload();
-
             setLoginFormData({
                 email: "",
                 password: "",
             });
+            Navigator("/dashboard");
         } catch (error) {
             console.error("Error during login:", error);
             alert("Login failed. Please check your email and password.");
