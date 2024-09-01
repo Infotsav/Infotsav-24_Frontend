@@ -5,7 +5,7 @@ import { useParams,Link } from "react-router-dom";
 // import TimeTab from "./TimeTab";
 // import ContactTab from "./ContactTab";
 // import Button from "./Button";
-import Butt from "./EventCardButton";
+//import Butt from "./EventCardButton";
 // import EventSlider from "./EventSlider";
 
 // Import event descriptions
