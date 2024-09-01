@@ -3,11 +3,14 @@ import ParticlesBackground from "../Components/ParticlesBackground";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { DocumentData } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
     const [userData, setUserData] = useState<DocumentData | null>(null);
     const [loading, setLoading] = useState(true);
     const [firstName, setFirstName] = useState<string>("");
+
+    const navigate = useNavigate();
 
     async function getUserdata() {
         const uid = localStorage.getItem("userID");
@@ -41,6 +44,10 @@ function Dashboard() {
         }
     }
 
+    if (!loading && !userData) {
+        navigate("/");
+    }
+
     useEffect(() => {
         getUserdata();
     }, []);
@@ -63,6 +70,13 @@ function Dashboard() {
         }
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("userID");
+        console.log("lpgegd out");
+        window.location.reload();
+    };
+
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-screen text-white">
@@ -80,26 +94,26 @@ function Dashboard() {
                 <div className="w-full h-full bg-opacity-80 p-6 rounded-lg shadow-lg mt-4 sm:mt-6">
                     {userData ? (
                         <div className="h-full w-full text-center">
-                            <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400 bg-opacity-50">
+                            <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400 bg-opacity-50 font-pixelhugger">
                                 Welcome, {firstName}!
                             </h1>
                             <div className="flex justify-center py-12 overflow-clip">
                                 <div className="flex justify-center items-center bg-gray-500/[0.24] rounded-3xl border-2 border-orange-700/[0.70] p-6 shadow-lg max-w-md w-full">
-                                    <div className="text-left space-y-4 h-full w-full text-xl flex-col">
+                                    <div className="text-left space-y-4 h-full w-full text-xl flex-col font-pixelhugger">
                                         <p className="flex items-center flex-initial ">
-                                            <span className="text-left text-gray-300 mr-2 ">
+                                            <span className="text-left text-gray-300 mr-2">
                                                 Email:
                                             </span>
-                                            <span className="text-gray-400 ">
-                                                {userData.email || "N/A"}
+                                            <span className="text-gray-400 text-left">
+                                                {userData?.email || "N/A"}
                                             </span>
                                         </p>
                                         <p className="flex items-center">
                                             <span className="text-gray-300 mr-2 ">
                                                 Contact:
                                             </span>
-                                            <span className="text-gray-400">
-                                                {userData.contactNumber ||
+                                            <span className="text-gray-400 ">
+                                                {userData?.contactNumber ||
                                                     "N/A"}
                                             </span>
                                         </p>
@@ -108,7 +122,7 @@ function Dashboard() {
                                                 College Name:
                                             </span>
                                             <span className="text-gray-400">
-                                                {userData.collegeName || "N/A"}
+                                                {userData?.collegeName || "N/A"}
                                             </span>
                                         </p>
                                         <p className="flex items-center sm:flex-auto">
@@ -118,8 +132,8 @@ function Dashboard() {
                                             <span
                                                 id="referral-text-box"
                                                 className="text-gray-400">
-                                                {userData.refCode
-                                                    ? userData.refCode
+                                                {userData?.refCode
+                                                    ? userData?.refCode
                                                     : "NOT-AVALIABLE-REFERALCODE"}
                                             </span>
                                             <span
@@ -129,6 +143,11 @@ function Dashboard() {
                                                 ⎙
                                             </span>
                                         </p>
+                                        <button
+                                            onClick={handleLogout}
+                                            className="bg-red-600/[0.90] hover:bg-red-600/[0.3] hover:text-gray-300 w-full py-2 text-white rounded-md">
+                                            Logout
+                                        </button>
                                     </div>
                                 </div>
                             </div>

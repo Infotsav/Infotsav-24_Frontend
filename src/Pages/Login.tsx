@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ParticlesBackground from "../Components/ParticlesBackground";
 import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -14,7 +14,7 @@ import {
     signInWithEmailAndPassword,
     sendEmailVerification,
 } from "firebase/auth";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function referralGenerate(name: string, contactNumber: string): string {
     const firstFourLettersOfName = name.slice(0, 4).toUpperCase();
@@ -25,7 +25,7 @@ function referralGenerate(name: string, contactNumber: string): string {
 
 function Login() {
     const [isRegistering, setIsRegistering] = useState(true);
-    // const Navigator = useNavigate();
+    const Navigator = useNavigate();
     const [regformData, setRegFormData] = useState({
         name: "",
         email: "",
@@ -33,8 +33,18 @@ function Login() {
         contactNumber: "",
         password: "",
     });
+    const [token, setToken] = useState<string | null>(null);
 
-    const [refCode, setRefCode] = useState<string>("");
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        setToken(token);
+    }, []);
+
+    if (token) {
+        Navigator("/dashboard");
+    }
+
+    // const [refCode, setRefCode] = useState<string>("");
 
     const [loginFormData, setLoginFormData] = useState({
         email: "",
@@ -77,8 +87,8 @@ function Login() {
             // Setting the Refferal code
             const reffereal: string = referralGenerate(email, contactNumber);
             console.log("refferal code Saved:- ", reffereal);
-            setRefCode(reffereal);
-            console.log("checking the usestate Ref: ", refCode);
+            // setRefCode(reffereal);
+            // console.log("checking the usestate Ref: ", refCode);
 
             // Store additional user information in Firestore
             localStorage.setItem("userID", user.uid);
@@ -87,7 +97,7 @@ function Login() {
                 email,
                 collegeName,
                 contactNumber,
-                refCode,
+                refCode: reffereal,
                 createdAt: new Date(),
             });
             console.log("RESULT", res, "shjdgbfvdjgj");
@@ -141,15 +151,13 @@ function Login() {
 
             alert("Login successful!");
             console.log("This is the UserData: ", user.uid);
-
             localStorage.setItem("userID", user.uid);
             localStorage.setItem("token", user.uid);
-            window.location.reload();
-
             setLoginFormData({
                 email: "",
                 password: "",
             });
+            Navigator("/dashboard");
         } catch (error) {
             console.error("Error during login:", error);
             alert("Login failed. Please check your email and password.");
