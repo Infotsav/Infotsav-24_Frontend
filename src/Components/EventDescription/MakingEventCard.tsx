@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams,Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 // import AboutTab from "./AboutTab";
 // import VenueTab from "./VenueTab";
 // import TimeTab from "./TimeTab";
@@ -26,7 +26,6 @@ interface Contact {
     phone: string;
     email: string;
 }
-
 
 const MakingEventCard: React.FC = () => {
     //   const [reg, setReg] = useState(false);
@@ -125,12 +124,16 @@ const MakingEventCard: React.FC = () => {
                     </div>
                 </div>
                 <div className="xl:w-1/5 lg:w-90 md:w-100 max-[768px]:w-[100%] flex flex-col items-center gap-2 justify-center m-2.5">
-                <Link to={eventDetails?.url} className="relative w-[150px] h-18 text-base p-[1px] bg-gradient-to-r from-[#e0e0e0] from-[0%] to-[#FFFFFF] 
+                    <Link
+                        to={eventDetails?.url}
+                        className="relative w-[150px] h-18 text-base p-[1px] bg-gradient-to-r from-[#e0e0e0] from-[0%] to-[#FFFFFF] 
                  hover:from-[#131313] hover:from-[61%] hover:to-[#5856D6] 
                  shadow-[0px_4px_4px_1px_rgba(168,167,248,0.51)] 
                  rounded-[30px] urbanist-unique font-extralight text-center 
                  text-black hover:text-white sm:text-lg sm:p-1 sm:w-48
-                  md:w-[220px] md:h-15 md:text-xl md:p-2">Register</Link>
+                  md:w-[220px] md:h-15 md:text-xl md:p-2">
+                        Register
+                    </Link>
                 </div>
             </div>
         </section>
