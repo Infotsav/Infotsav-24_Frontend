@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 // import AboutTab from "./AboutTab";
 // import VenueTab from "./VenueTab";
 // import TimeTab from "./TimeTab";
 // import ContactTab from "./ContactTab";
 // import Button from "./Button";
-import Butt from "./EventCardButton";
+//import Butt from "./EventCardButton";
 // import EventSlider from "./EventSlider";
 
 // Import event descriptions
@@ -26,6 +26,7 @@ interface Contact {
     phone: string;
     email: string;
 }
+
 
 const MakingEventCard: React.FC = () => {
     //   const [reg, setReg] = useState(false);
@@ -125,38 +126,6 @@ const MakingEventCard: React.FC = () => {
                 </div>
                 <div className="xl:w-1/5 lg:w-90 md:w-100 max-[768px]:w-[100%] flex flex-col items-center gap-2 justify-center m-2.5">
                     <Butt title="Register" />
-                    {/* <div className="flex w-full justify-between md:justify-center items-center">
-                        <div className="w-fit text-2">
-                            <a
-                                className="font-bold text-xl underline text-yellow-400 pr-5"
-                                href={
-                                    eventDetails?.description?.overview || "#"
-                                }
-                                target="_blank"
-                                referrerPolicy="no-referrer">
-                                Rule Book
-                            </a>
-                        </div>
-
-                        <span className="font-bold text-xl hidden md:flex underline text-yellow-400">
-                            |
-                        </span>
-
-                        <div className="pl-5">
-                            <a
-                                className="font-bold flex text-xl underline text-yellow-400"
-                                href={
-                                    eventDetails?.docs ||
-                                    "https://codebeautify.org/random-link-generator"
-                                }
-                                target="_blank"
-                                referrerPolicy="no-referrer">
-                                <span className="underline pr-2 text-right flex">
-                                    Docs
-                                </span>
-                            </a>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </section>
