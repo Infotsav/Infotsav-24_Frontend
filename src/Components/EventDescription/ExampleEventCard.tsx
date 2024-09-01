@@ -48,6 +48,8 @@ const EventCard: React.FC<EventCardProps> = (props) => {
         "Dec",
     ];
 
+    console.log("This are the props here", props);
+
     const Location = () => {
         window.open(props.data?.venue, "_blank");
     };
@@ -122,6 +124,20 @@ const EventCard: React.FC<EventCardProps> = (props) => {
                 <div className="font-retrog text-center md:text-left lg:text-3xl md:text-3xl sm:text-3xl text-4xl mt-0 max-[640px]:my-2 max-[640px]:flex justify-center">
                     {props.data?.name}
                 </div>
+                {/* <h3 className="text-[#6C91FF] font-bold text-3xl mb-1">
+                    Contacts:
+                </h3>
+                {contacts.map((contact, index) => {
+                    return (
+                        <div key={index} className="mt-4">
+                            <h4 className="text-[#6C91FF] font-semibold text-xl">
+                                {contact.name}
+                            </h4>
+                            <p>{contact.number}</p>
+                            <p>{contact.email}</p>
+                        </div>
+                    );
+                })} */}
 
                 <br />
                 <div className="flex w-full justify-between md:justify-start items-center">
@@ -135,7 +151,7 @@ const EventCard: React.FC<EventCardProps> = (props) => {
                         </a>
                     </div>
 
-                    <span className="font-bold text-xl hidden md:flex underline text-yellow-400">
+                    <span className="font-bold text-xl hidden md:flex text-yellow-400">
                         |
                     </span>
 

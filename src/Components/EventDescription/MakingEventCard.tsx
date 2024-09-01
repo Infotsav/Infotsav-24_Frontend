@@ -9,134 +9,158 @@ import Butt from "./EventCardButton";
 // import EventSlider from "./EventSlider";
 
 // Import event descriptions
-import TechnicalEvents from '../../constants/EventData/TechnicalEvents.json';
-import ManagerialEvents from '../../constants/EventData/ManagerialEvents.json';
-import RoboticsEvents from '../../constants/EventData/RoboticsEvents.json';
-import OnlineEvents from '../../constants/EventData/OtherEvents.json';
+import TechnicalEvents from "../../constants/EventData/TechnicalEvents.json";
+import ManagerialEvents from "../../constants/EventData/ManagerialEvents.json";
+import RoboticsEvents from "../../constants/EventData/RoboticsEvents.json";
+import OnlineEvents from "../../constants/EventData/OtherEvents.json";
 
 const eventsData: { [key: string]: any } = {
-  Technical: TechnicalEvents,
-  Managerial: ManagerialEvents,
-  Robotics: RoboticsEvents,
-  Online: OnlineEvents,
+    Technical: TechnicalEvents,
+    Managerial: ManagerialEvents,
+    Robotics: RoboticsEvents,
+    Online: OnlineEvents,
 };
 
+interface Contact {
+    name: string;
+    phone: string;
+    email: string;
+}
+
 const MakingEventCard: React.FC = () => {
-//   const [reg, setReg] = useState(false);
-  
-//   const months = [
-//     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-//   ];
+    //   const [reg, setReg] = useState(false);
 
-  const { category, id } = useParams<{ category: string; id: string }>();
-//   const [activeTab, setActiveTab] = useState("about");
-  const [eventDetails, setEventDetails] = useState<any>(null);
+    //   const months = [
+    //     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    //   ];
 
-  useEffect(() => {
-    if (category && id) {
-      const eventData = eventsData[category]?.find((event: any) => event.id === parseInt(id, 10));
-      setEventDetails(eventData);
-    }
-  }, [category, id]);
+    const { category, id } = useParams<{ category: string; id: string }>();
+    //   const [activeTab, setActiveTab] = useState("about");
+    const [eventDetails, setEventDetails] = useState<any>(null);
 
-//   const renderContent = () => {
-//     if (!eventDetails) {
-//       return <div>Loading...</div>;
-//     }
+    useEffect(() => {
+        if (category && id) {
+            const eventData = eventsData[category]?.find(
+                (event: any) => event.id === parseInt(id, 10)
+            );
+            setEventDetails(eventData);
+        }
+    }, [category, id]);
 
-//     switch (activeTab) {
-//       case "about":
-//         return <AboutTab about={eventDetails.about} />;
-//       case "venue":
-//         return <VenueTab venue={eventDetails.venue} />;
-//       case "time":
-//         return <TimeTab time={eventDetails.time} />;
-//       case "contact":
-//         return <ContactTab contacts={eventDetails.contact} />;
-//       default:
-//         return <AboutTab about={eventDetails.about} />;
-//     }
-//   };
+    return (
+        <section className="min-h-screen flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-10 bg-none">
+            <div className="bg-[#0000004d] font-pixelhugger p-3 w-[90vw] min-h-40 flex my-[20px] mx-[5vw] text-[#f0f8ff] backdrop-blur rounded-[40px] shadow-[0px_0px_20px_#8f8f8f8f] items-center max-[768px]:flex-wrap max-[768px]:justify-center mt-40 sm:mt-10">
+                {" "}
+                {/* Adjusted margin-top for mobile */}
+                <div className="relative overflow-hidden aspect-square w-full max-w-[25rem]">
+                    <img
+                        className="absolute inset-0 object-cover w-full h-full rounded-[40px] border-4 border-white border-opacity-30 "
+                        src={eventDetails?.img || "/Card-Robo.png"}
+                        alt="event"
+                    />
+                </div>
+                <div className="w-3/5 lg:w-90 md:w-90 max-[768px]:w-[90%] self-start px-10">
+                    <div className="font-retrog text-center md:text-left lg:text-3xl md:text-3xl sm:text-3xl text-4xl mt-0 max-[640px]:my-2 max-[640px]:flex justify-center bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400">
+                        {eventDetails?.name || "Event Name"}
+                    </div>
 
-//   const tabs = [
-//     { id: "about", label: "ABOUT" },
-//     { id: "venue", label: "VENUE" },
-//     { id: "time", label: "TIME" },
-//     { id: "contact", label: "CONTACT" },
-//   ];
+                    <div className="font-ticketing xl:text-xl sm:text-md max-[640px]:text-md text-gray-500">
+                        {eventDetails?.description ? (
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: eventDetails.about,
+                                }}></div>
+                        ) : null}
+                    </div>
+                    <div className="font-retrog mt-4 text-center md:text-left lg:text-3xl md:text-3xl sm:text-3xl text-4xl max-[640px]:my-2 max-[640px]:flex justify-center bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400">
+                        Contact
+                    </div>
 
-  return (
-    <section className="min-h-screen flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-10 bg-none">
-      <div className="bg-[#0000004d] p-3 w-[90vw] min-h-40 flex my-[20px] mx-[5vw] text-[#f0f8ff] backdrop-blur rounded-[25px] shadow-[0px_0px_20px_#8f8f8f8f] items-center max-[768px]:flex-wrap max-[768px]:justify-center mt-10 sm:mt-40"> {/* Adjusted margin-top for mobile */}
-        <div className="relative overflow-hidden aspect-square w-full max-w-[25rem]">
-            <img
-                className="absolute inset-0 object-cover w-full h-full rounded-3xl border-4 border-white border-opacity-30"
-                src={eventDetails?.img || "/Card-Robo.png"} 
-                alt="event"
-            />
-        </div>
+                    {eventDetails?.contact?.map(
+                        (contact: Contact, index: number) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className="mt-4 inline-block m-5">
+                                    <h4 className="text-blue-200 font-semibold ">
+                                        {contact?.name}
+                                    </h4>
+                                    <p className="text-gray-500">
+                                        {contact?.phone ? contact.phone : ""}
+                                    </p>
+                                    <p className="text-gray-500">
+                                        {contact?.email}
+                                    </p>
+                                </div>
+                            );
+                        }
+                    )}
 
-        <div className="w-3/5 lg:w-90 md:w-90 max-[768px]:w-[90%] self-start px-10">
-          <div className="font-retrog text-center md:text-left lg:text-3xl md:text-3xl sm:text-3xl text-4xl mt-0 max-[640px]:my-2 max-[640px]:flex justify-center">
-            {eventDetails?.name || "Event Name"} 
-          </div>
+                    <br />
+                    <div className="max-[768px]:flex justify-start max-[768px]:justify-between max-[768px]:w-[95%] gap-2 ">
+                        <div className="flex ">
+                            <div className="font-retrog text-lg sm:text-2xl ">
+                                <div className="">
+                                    <s className=" bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400">
+                                        Prizes Worth :-{" "}
+                                    </s>
+                                    <s className=" bg-clip-text bg-gradient-to-b text-transparent from-yellow-50 to-yellow-400">
+                                        INR{" "}
+                                        {eventDetails?.prize
+                                            ? eventDetails.prize
+                                                  .toString()
+                                                  .substring(0, 2) + "K"
+                                            : "No Price"}
+                                    </s>
+                                </div>
+                            </div>
+                        </div>
 
-          <div className="font-ticketing xl:text-xl sm:text-md max-[640px]:text-md">
-            {eventDetails?.description ? (
-              <div dangerouslySetInnerHTML={{ __html: eventDetails.about }}></div>
-            ) : null}
-          </div>
+                        <div className="flex max-[400px]:text-[11px] flex-col justify-start items-start bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400">
+                            <div className="date font-retrog w-fit text-wrap text-xl sm:text-2xl ">
+                                Date :- {eventDetails?.date}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="xl:w-1/5 lg:w-90 md:w-100 max-[768px]:w-[100%] flex flex-col items-center gap-2 justify-center m-2.5">
+                    <Butt title="Register" />
+                    {/* <div className="flex w-full justify-between md:justify-center items-center">
+                        <div className="w-fit text-2">
+                            <a
+                                className="font-bold text-xl underline text-yellow-400 pr-5"
+                                href={
+                                    eventDetails?.description?.overview || "#"
+                                }
+                                target="_blank"
+                                referrerPolicy="no-referrer">
+                                Rule Book
+                            </a>
+                        </div>
 
-          <br />
-          <div className="flex w-full justify-between md:justify-start items-center">
-            <div className="w-fit text-2">
-              <a
-                className="font-bold text-xl underline text-yellow-400 pr-5"
-                href={eventDetails?.description?.overview || "#"}
-                target="_blank"
-                referrerPolicy="no-referrer"
-              >
-                Rule Book
-              </a>
+                        <span className="font-bold text-xl hidden md:flex underline text-yellow-400">
+                            |
+                        </span>
+
+                        <div className="pl-5">
+                            <a
+                                className="font-bold flex text-xl underline text-yellow-400"
+                                href={
+                                    eventDetails?.docs ||
+                                    "https://codebeautify.org/random-link-generator"
+                                }
+                                target="_blank"
+                                referrerPolicy="no-referrer">
+                                <span className="underline pr-2 text-right flex">
+                                    Docs
+                                </span>
+                            </a>
+                        </div>
+                    </div> */}
+                </div>
             </div>
-
-            <span className="font-bold text-xl hidden md:flex underline text-yellow-400">
-              |
-            </span>
-
-            <div className="text-2 pl-5">
-              <a
-                className="font-bold flex text-xl underline text-yellow-400"
-                href={eventDetails?.docs || "https://codebeautify.org/random-link-generator"}
-                target="_blank"
-                referrerPolicy="no-referrer"
-              >
-                <span className="underline pr-2">Docs</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="xl:w-1/5 lg:w-90 md:w-100 max-[768px]:w-[100%] flex flex-col items-center gap-2 justify-center m-2.5">
-          <div className="max-[768px]:flex max-[768px]:justify-between max-[768px]:w-[95%]">
-            <div className="flex items-center">
-              <div className="text-2xl font-retrog">
-                {eventDetails?.prize ? (eventDetails.prize.toString().substring(0, 2) + "K") : "No Price"}
-              </div>
-            </div>
-
-            <div className="flex max-[400px]:text-[11px] flex-col justify-center items-center">
-              <div className="date font-retrog w-fit text-wrap">
-                {eventDetails?.date}
-              </div>
-            </div>
-          </div>
-          
-          <Butt title="Register" />
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default MakingEventCard;
