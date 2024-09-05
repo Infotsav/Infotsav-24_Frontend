@@ -15,6 +15,7 @@ import {
     sendEmailVerification,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function referralGenerate(name: string, contactNumber: string): string {
     const firstFourLettersOfName = name.slice(0, 4).toUpperCase();
@@ -149,8 +150,7 @@ function Login() {
                 return;
             }
 
-            alert("Login successful!");
-            console.log("This is the UserData: ", user.uid);
+            toast("Login successful!");
             localStorage.setItem("userID", user.uid);
             localStorage.setItem("token", user.uid);
             setLoginFormData({
