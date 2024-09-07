@@ -5,7 +5,7 @@ import DigitalOcean from "../assets/PastSponsors/Digital_Ocean.png";
 import FabHotels from "../assets/PastSponsors/fabHotels.jpg";
 import FestPav from "../assets/PastSponsors/FestPav.png";
 import HackSociety from "../assets/PastSponsors/Hack_Society.png";
-import HackerEarth from '../assets/PastSponsors/HackerEarth.png';
+import HackerEarth from "../assets/PastSponsors/HackerEarth.png";
 import InkMonk from "../assets/PastSponsors/InkMonk.png";
 import KnowAFest from "../assets/PastSponsors/KnowAFest.png";
 import MyFM from "../assets/PastSponsors/MyFM.png";
@@ -26,10 +26,19 @@ import hacksociety from "../assets/SponsorPage/hacksociety.png";
 import knowafest from "../assets/SponsorPage/knowafest.png";
 import wolfram from "../assets/SponsorPage/wolfram.png";
 import codechef from "../assets/SponsorPage/codechef.png";
+import devfolio from "../assets/SponsorPage/devfolio.png";
+import ethIndia from "../assets/SponsorPage/EthIndia.png";
+import polygon from "../assets/SponsorPage/Polygon.png";
 
 export interface Sponsor {
     name: string;
     src: string;
+}
+
+export interface currentSponsor {
+    name: string;
+    src: string;
+    alt: string;
 }
 
 export const pastSponsors1: Sponsor[] = [
@@ -39,7 +48,7 @@ export const pastSponsors1: Sponsor[] = [
     { name: "Digital Ocean", src: DigitalOcean },
     { name: "FabHotels", src: FabHotels },
     { name: "FestPav", src: FestPav },
-    { name: "Hack Society", src: HackSociety }
+    { name: "Hack Society", src: HackSociety },
 ];
 
 export const pastSponsors2: Sponsor[] = [
@@ -49,7 +58,7 @@ export const pastSponsors2: Sponsor[] = [
     { name: "MyFM", src: MyFM },
     { name: "PayTM", src: PayTM },
     { name: "Swiggy", src: Swiggy },
-    { name: "The College Fever", src: TCF }
+    { name: "The College Fever", src: TCF },
 ];
 
 export const sponsorPage: Sponsor[] = [
@@ -66,5 +75,11 @@ export const sponsorPage: Sponsor[] = [
     { name: "hacksociety", src: hacksociety },
     { name: "knowafest", src: knowafest },
     { name: "wolfram", src: wolfram },
-    { name: "codechef", src: codechef }
+    { name: "codechef", src: codechef },
+];
+
+export const currentSponsers: currentSponsor[] = [
+    { name: "Devfolio", src: devfolio, alt: "DEVFOLIO LOGO" },
+    { name: "Polygon", src: polygon, alt: "POLYGON LOGO" },
+    { name: "EthIndia", src: ethIndia, alt: "ETHINDIA LOGO" },
 ];
