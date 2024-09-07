@@ -51,6 +51,7 @@ const CampusAmbassador: React.FC = () => {
                     <button
                         className="bg-[#FEFEFE] text-black w-40 font-pixelify text-2xl px-8 py-3 rounded-md hover:bg-gray-300 transition m-5"
                         onClick={() =>
+
                             (window.location.href =
                                 "https://rightful-lock-b42.notion.site/Infotsav-24-Campus-Ambassador-Program-738b0f78578349c0b12946f92ffca139")
                         }>
