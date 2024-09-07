@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-// import AboutTab from "./AboutTab";
-// import VenueTab from "./VenueTab";
-// import TimeTab from "./TimeTab";
-// import ContactTab from "./ContactTab";
-// import Button from "./Button";
-//import Butt from "./EventCardButton";
-// import EventSlider from "./EventSlider";
 
 // Import event descriptions
 import TechnicalEvents from "../../constants/EventData/TechnicalEvents.json";
@@ -28,14 +21,7 @@ interface Contact {
 }
 
 const MakingEventCard: React.FC = () => {
-    //   const [reg, setReg] = useState(false);
-
-    //   const months = [
-    //     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-    //   ];
-
     const { category, id } = useParams<{ category: string; id: string }>();
-    //   const [activeTab, setActiveTab] = useState("about");
     const [eventDetails, setEventDetails] = useState<any>(null);
 
     useEffect(() => {
@@ -47,11 +33,25 @@ const MakingEventCard: React.FC = () => {
         }
     }, [category, id]);
 
+    // Load the Devfolio script if the event is Technical and id is 1
+    useEffect(() => {
+        if (category === "Technical" && id === "1") {
+            const script = document.createElement("script");
+            script.src = "https://apply.devfolio.co/v2/sdk.js";
+            script.async = true;
+            script.defer = true;
+            document.body.appendChild(script);
+            return () => {
+                document.body.removeChild(script);
+            };
+        }
+    }, [category, id]);
+
+    console.log("eventDetails :-", eventDetails);
+
     return (
         <section className="min-h-screen flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-10 bg-none">
             <div className="bg-[#0000004d] font-pixelhugger p-3 w-[90vw] min-h-40 flex my-[20px] mx-[5vw] text-[#f0f8ff] backdrop-blur rounded-[40px] shadow-[0px_0px_20px_#8f8f8f8f] items-center max-[768px]:flex-wrap max-[768px]:justify-center mt-40 sm:mt-10">
-                {" "}
-                {/* Adjusted margin-top for mobile */}
                 <div className="relative overflow-hidden aspect-square w-full max-w-[25rem]">
                     <img
                         className="absolute inset-0 object-cover w-full h-full rounded-[40px] border-4 border-white border-opacity-30 "
@@ -77,30 +77,26 @@ const MakingEventCard: React.FC = () => {
                     </div>
 
                     {eventDetails?.contact?.map(
-                        (contact: Contact, index: number) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className="mt-4 inline-block m-5">
-                                    <h4 className="text-blue-200 font-semibold ">
-                                        {contact?.name}
-                                    </h4>
-                                    <p className="text-gray-500">
-                                        {contact?.phone ? contact.phone : ""}
-                                    </p>
-                                    <p className="text-gray-500">
-                                        {contact?.email}
-                                    </p>
-                                </div>
-                            );
-                        }
+                        (contact: Contact, index: number) => (
+                            <div key={index} className="mt-4 inline-block m-5">
+                                <h4 className="text-blue-200 font-semibold">
+                                    {contact?.name}
+                                </h4>
+                                <p className="text-gray-500">
+                                    {contact?.phone || ""}
+                                </p>
+                                <p className="text-gray-500">
+                                    {contact?.email}
+                                </p>
+                            </div>
+                        )
                     )}
 
                     <br />
                     <div className="max-[768px]:flex justify-start max-[768px]:justify-between max-[768px]:w-[95%] gap-2 ">
                         <div className="flex ">
                             <div className="font-retrog text-lg sm:text-2xl ">
-                                <div className="">
+                                <div>
                                     <s className=" bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400">
                                         Prizes Worth :-{" "}
                                     </s>
@@ -123,17 +119,26 @@ const MakingEventCard: React.FC = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="xl:w-1/5 lg:w-90 md:w-100 max-[768px]:w-[100%] flex flex-col items-center gap-2 justify-center m-2.5">
-                    <Link
-                        to={eventDetails?.url}
-                        className="relative w-[150px] h-18 text-base p-[1px] bg-gradient-to-r from-[#e0e0e0] from-[0%] to-[#FFFFFF] 
+                    {category === "Technical" && id === "1" ? (
+                        <div
+                            className="apply-button"
+                            data-hackathon-slug="Hackatron24"
+                            data-button-theme="dark-inverted"
+                            style={{ height: "44px", width: "312px" }}></div>
+                    ) : (
+                        <Link
+                            to={eventDetails?.url}
+                            className="relative w-[150px] h-18 text-base p-[1px] bg-gradient-to-r from-[#e0e0e0] from-[0%] to-[#FFFFFF] 
                  hover:from-[#131313] hover:from-[61%] hover:to-[#5856D6] 
                  shadow-[0px_4px_4px_1px_rgba(168,167,248,0.51)] 
                  rounded-[30px] urbanist-unique font-extralight text-center 
                  text-black hover:text-white sm:text-lg sm:p-1 sm:w-48
                   md:w-[220px] md:h-15 md:text-xl md:p-2">
-                        Register
-                    </Link>
+                            Register
+                        </Link>
+                    )}
                 </div>
             </div>
         </section>
