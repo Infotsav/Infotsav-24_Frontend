@@ -51,7 +51,9 @@ const CampusAmbassador: React.FC = () => {
                     <button
                         className="bg-[#FEFEFE] text-black w-40 font-pixelify text-2xl px-8 py-3 rounded-md hover:bg-gray-300 transition m-5"
                         onClick={() =>
-                            (window.location.href = "https://www.notion.so/Infotsav-24-Campus-Ambassador-Program-738b0f78578349c0b12946f92ffca139")
+
+                            (window.location.href =
+                                "https://rightful-lock-b42.notion.site/Infotsav-24-Campus-Ambassador-Program-738b0f78578349c0b12946f92ffca139")
                         }>
                         Docs
                     </button>
@@ -68,11 +70,6 @@ const CampusAmbassador: React.FC = () => {
                     </h3>
                     <div className="text-white font-mono text-xl md:text-2xl space-y-6">
                         <div>
-                            <strong>Q:</strong> How do I track my registrations?{" "}
-                            <br />
-                            <strong>A:</strong> We also not sure by now
-                        </div>
-                        <div>
                             <strong>Q:</strong> When will I receive my rewards?{" "}
                             <br />
                             <strong>A:</strong> Rewards are distributed after
@@ -83,6 +80,14 @@ const CampusAmbassador: React.FC = () => {
                             technical background? <br />
                             <strong>A:</strong> Yes, the program is open to all
                             students, regardless of their field of study.
+                        </div>
+                        <div>
+                            <strong>Q:</strong> Is there any registration fee
+                            for participation? <br />
+                            <strong>A:</strong>Registration for Round 1 is free,
+                            while Round 2 requires a small registration fee,
+                            which can be reimbursed by your respective
+                            institute.
                         </div>
                     </div>
                 </section>
