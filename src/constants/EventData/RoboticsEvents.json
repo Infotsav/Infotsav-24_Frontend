@@ -282,5 +282,25 @@
                 "obstacle_contact": "Touching obstacles is allowed as long as the robot remains operational."
             }
         }
+    },
+    {
+        "id":12,
+        "name": "RoboMaze",
+        "about":"The challenge, involves building a remote-controlled Micromouse that can find its way to the center of a maze, aiming to complete the task in the least amount of time.",
+        "fee": 0,
+        "date": "2024-10-21",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1725829788/robomaze_lnging.jpg",
+        "url": "https://unstop.com/o/fIyl5zD?lb=DEFYY6di",
+        "prize": "25k",
+        "contact": [
+            {
+                "name": "Uajjawal Sharma",
+                "phone": "8769445541",
+                "email": "events@infotsav.in"
+            }
+        ],
+        "description": {
+            "overview":"The challenge, involves building a Micromouse that can find its way to the center of a maze, aiming to complete the task in the least amount of time."
+        }
     }
 ]

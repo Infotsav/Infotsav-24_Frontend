@@ -50,7 +50,7 @@
         "fee": 0,
         "date": "2024-10-18",
         "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1725828351/Techathalon_enfyoo.jpg",
-        "url": "",
+        "url": "https://mstats.dare2compete.com/CL0/https:%2F%2Funstop.com%2Fp%2Ftechathalon-infotsav24-atal-bihari-vajpayee-indian-institute-of-information-technology-and-management-abv-iiitm-gwalio-1150235%3Futm_campaign=site-emails%26utm_medium=d2c-automated%26utm_source=opportunity-approved/1/01090191cdcbb522-08da545c-51c4-4335-9d53-426abdaf6283-000000/YqMiPmPx2xNmEo-c7Wwxqh3lFQtmVfso_EITewfbxN8=171",
         "prize": "70k",
         "contact": [
             {
@@ -63,7 +63,10 @@
                 "phone": "+91-8076469828",
                 "email": "events@infotsav.in"
             }
-        ]
+        ],
+        "description":{
+            "overview":"Techathlon is a fast-paced, multi-round competition that pushes participants to demonstrate their coding prowess across diverse and challenging tasks. It is designed for skilled coders, software programmers, and developers who are eager to test their debugging, code optimization, and teamwork abilities. Techathlon consists of three sub-events: Bugspot, Code Golf Challenge, and Code-Relay. Each event highlights different aspects of coding expertise, from bug fixing to code brevity and collaborative problem-solving."
+        }
     },
     {
         "id": 3,
