@@ -43,6 +43,29 @@
         }
     },
     {
+        "id": 2,
+        "name": "Techathalon",
+        "category": "Technical",
+        "about": "Techathlon is a fast-paced, multi-round competition that pushes participants to demonstrate their coding prowess across diverse and challenging tasks. It is designed for skilled coders, software programmers, and developers who are eager to test their debugging, code optimization, and teamwork abilities. Techathlon consists of three sub-events: Bugspot, Code Golf Challenge, and Code-Relay. Each event highlights different aspects of coding expertise, from bug fixing to code brevity and collaborative problem-solving.",
+        "fee": 0,
+        "date": "2024-10-18",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1725828351/Techathalon_enfyoo.jpg",
+        "url": "",
+        "prize": "70k",
+        "contact": [
+            {
+                "name": "Hiren Sharma",
+                "phone": "+91-9154644088",
+                "email": "events@infotsav.in"
+            },
+            {
+                "name": "Aditya Karki",
+                "phone": "+91-8076469828",
+                "email": "events@infotsav.in"
+            }
+        ]
+    },
+    {
         "id": 3,
         "name": "Code Rush",
         "category": "Technical",

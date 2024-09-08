@@ -84,7 +84,7 @@ const CampusAmbassador: React.FC = () => {
                         <div>
                             <strong>Q:</strong> Is there any registration fee
                             for participation? <br />
-                            <strong>A:</strong>Registration for Round 1 is free,
+                            <strong>A:</strong> Registration for Round 1 is free,
                             while Round 2 requires a small registration fee,
                             which can be reimbursed by your respective
                             institute.

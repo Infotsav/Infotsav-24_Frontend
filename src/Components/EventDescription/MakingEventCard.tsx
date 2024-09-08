@@ -111,12 +111,6 @@ const MakingEventCard: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-
-                        <div className="flex max-[400px]:text-[11px] flex-col justify-start items-start bg-clip-text bg-gradient-to-b text-transparent from-neutral-50 to-neutral-400">
-                            <div className="date font-retrog w-fit text-wrap text-xl sm:text-2xl ">
-                                Date :- {eventDetails?.date}
-                            </div>
-                        </div>
                     </div>
                 </div>
 
