@@ -286,6 +286,7 @@
     {
         "id":12,
         "name": "RoboMaze",
+        "category": "Robotics",
         "about":"The challenge, involves building a remote-controlled Micromouse that can find its way to the center of a maze, aiming to complete the task in the least amount of time.",
         "fee": 0,
         "date": "2024-10-21",
