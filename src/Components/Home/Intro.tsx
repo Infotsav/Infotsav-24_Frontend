@@ -1,7 +1,7 @@
 import stars from "../../assets/stars.png";
 import splash from "../../assets/splash.png";
 import IntroNavBar from "./IntroNavBar";
-import HomePageVideo from "../../assets/HomePageVideo/HomePageVideo.mp4";
+// import HomePageVideo from "../../assets/HomePageVideo/HomePageVideo.mp4";
 
 const Intro = () => {
     return (
@@ -20,7 +20,7 @@ const Intro = () => {
                         <div className="relative w-full h-full flex justify-center items-center">
                             <div className="relative mx-auto z-[29] w-[70vw] aspect-video overflow-hidden flex justify-center items-center max-w-[1000px]">
                                 <video
-                                    src={`${HomePageVideo}`}
+                                    src={`https://res.cloudinary.com/dah8h7uld/video/upload/v1726253341/InfotsavHomePageVideo.mp4`}
                                     className="relative mx-auto aspect-video"
                                     controls={true}
                                     autoPlay={true}
