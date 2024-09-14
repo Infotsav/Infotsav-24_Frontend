@@ -20,7 +20,7 @@ const Intro = () => {
                         <div className="relative w-full h-full flex justify-center items-center">
                             <div className="relative mx-auto z-[29] w-[70vw] aspect-video overflow-hidden flex justify-center items-center max-w-[1000px]">
                                 <video
-                                    src={`https://res.cloudinary.com/dah8h7uld/video/upload/v1726253341/InfotsavHomePageVideo.mp4`}
+                                    src={`https://res.cloudinary.com/dah8h7uld/video/upload/v1726293179/UpdatedHomePAgeVideo.mp4`}
                                     className="relative mx-auto aspect-video"
                                     controls={true}
                                     autoPlay={true}
