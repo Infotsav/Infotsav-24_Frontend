@@ -30,6 +30,7 @@ import devfolio from "../assets/SponsorPage/devfolio.png";
 import ethIndia from "../assets/SponsorPage/EthIndia.png";
 import polygon from "../assets/SponsorPage/Polygon.png";
 import internshala from "../assets/SponsorPage/internshala.png";
+import canaraBank from "../assets/SponsorPage/canaraBank.png";
 
 export interface Sponsor {
     name: string;
@@ -84,4 +85,5 @@ export const currentSponsers: currentSponsor[] = [
     { name: "Polygon", src: polygon, alt: "POLYGON LOGO" },
     { name: "EthIndia", src: ethIndia, alt: "ETHINDIA LOGO" },
     { name: "Internshala", src: internshala, alt: "INTERNSHALA LOGO" },
+    { name: "CanaraBank", src: canaraBank, alt: "CANARABANK LOGO" },
 ];
