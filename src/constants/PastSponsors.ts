@@ -29,6 +29,7 @@ import codechef from "../assets/SponsorPage/codechef.png";
 import devfolio from "../assets/SponsorPage/devfolio.png";
 import ethIndia from "../assets/SponsorPage/EthIndia.png";
 import polygon from "../assets/SponsorPage/Polygon.png";
+import internshala from "../assets/SponsorPage/internshala.png";
 
 export interface Sponsor {
     name: string;
@@ -82,4 +83,5 @@ export const currentSponsers: currentSponsor[] = [
     { name: "Devfolio", src: devfolio, alt: "DEVFOLIO LOGO" },
     { name: "Polygon", src: polygon, alt: "POLYGON LOGO" },
     { name: "EthIndia", src: ethIndia, alt: "ETHINDIA LOGO" },
+    { name: "Internshala", src: internshala, alt: "INTERNSHALA LOGO" },
 ];
