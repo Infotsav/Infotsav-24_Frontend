@@ -16,17 +16,17 @@
             {
                 "name": "Uajjawal Sharma",
                 "phone": "8769445541",
-                "email": "events@infotsav.in"
+                "email": "infotsav@iiitm.ac.in"
             },
             {
                 "name": "Sambodhi Roy",
                 "phone": "7439811569",
-                "email": "events@infotsav.in"
+                "email": "infotsav@iiitm.ac.in"
             },
             {
                 "name": "Bhudev Bhanpuriya",
                 "phone": "8823085185",
-                "email": "events@infotsav.in"
+                "email": "infotsav@iiitm.ac.in"
             }
 
         ],
@@ -77,7 +77,7 @@
             {
                 "name": "Uajjawal Sharma",
                 "phone": "8769445541",
-                "email": "events@infotsav.in"
+                "email": "infotsav@iiitm.ac.in"
             }
         ],
         "description": {
@@ -111,7 +111,7 @@
         "id": 14,
         "name": "Brandsome",
         "category": "Managerial",
-        "about": "The Annual Paper Presentation Conference, Sameeksha, is designed to encourage students to prepare and present meaningful papers and presentations on a wide range of topics, both technical and non-technical. This event offers students valuable early experience in researching, writing, and presenting ideas related to their areas of interest and expertise.",
+        "about":"Do you have a knack for innovative advertising? Are you brimming with marketing ideas and eager to showcase your talent? Brandsome is the event where you can test your creativity and convincing skills by marketing a wacky or non-existent product. Participants are required to develop an offbeat product concept that could potentially revolutionize people's lives. The challenge lies not only in creating the product but also in promoting it as an influential brand. Show off your imagination and creativity by zapping everyone's minds with your unique product ideas and extraordinary marketing skills.",
         "fee": 0,
         "date": "2024-10-25",
         "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1725832738/brandsome_eit9bd.jpg",
@@ -121,7 +121,7 @@
             {
                 "name": "Uajjawal Sharma",
                 "phone": "8769445541",
-                "email": "events@infotsav.in"
+                "email": "infotsav@iiitm.ac.in"
             }
         ],
         "description": {
