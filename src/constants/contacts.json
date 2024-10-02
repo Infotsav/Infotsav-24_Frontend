@@ -1,7 +1,12 @@
 [
     {
+        "name": "Uajjawal Sharma",
+        "email": "img_2022064@iiitm.ac.in",
+        "number": "+91 8769445541"
+    },   
+    {
         "name": "Divya Agrawal",
-        "email": "divyaagrawal0747@gmail.com",
+        "email": "imt_2022038@iiitm.ac.in",
         "number": "+91 8273801316"
     },
     {
@@ -10,8 +15,13 @@
         "number": "+91 7015426388"
     },
     {
+        "name": "Kunal Vardani",
+        "email": "img_2022032@iiitm.ac.in",
+        "number": "+91 8769445541"
+    },  
+    {
         "name": "Rishabh Agarwal",
-        "email": "agarwalrishabh1704@gmail.com",
+        "email": "bcs_2022079@iiitm.ac.in",
         "number": "+91 9163430474"
     }
 ]
