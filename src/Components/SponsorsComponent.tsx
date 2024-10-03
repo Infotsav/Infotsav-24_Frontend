@@ -1,4 +1,4 @@
-import { sponsorPage, currentSponsers } from "../constants/PastSponsors";
+import { sponsorPage, currentSponsers } from '../constants/PastSponsors';
 
 export const SponsorsComponent = () => {
     return (
