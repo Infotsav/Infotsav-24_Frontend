@@ -32,6 +32,7 @@ import polygon from '../assets/SponsorPage/Polygon.png';
 import internshala from '../assets/SponsorPage/internshala.png';
 import canaraBank from '../assets/SponsorPage/canaraBank.png';
 import unstop from '../assets/SponsorPage/unstop.png';
+import sbi from '../assets/SponsorPage/SBI.png';
 
 export interface Sponsor {
     name: string;
@@ -88,4 +89,5 @@ export const currentSponsers: currentSponsor[] = [
     { name: 'Internshala', src: internshala, alt: 'INTERNSHALA LOGO' },
     { name: 'CanaraBank', src: canaraBank, alt: 'CANARABANK LOGO' },
     { name: 'Unstop', src: unstop, alt: 'UNSTOP LOGO' },
+    { name: 'Sbi', src: sbi, alt: 'SBI LOGO' },
 ];
