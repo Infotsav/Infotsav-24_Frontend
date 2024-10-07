@@ -133,6 +133,17 @@
         }
     },
     {
+        "id": 3,
+        "name": "Code Rush",
+        "category": "Technical",
+        "about": "A high-intensity coding contest testing participants logic, math, and algorithmic skills through complex problem statements.",
+        "fee": 0,
+        "date": "2024-10-18",
+        "img": "https://res.cloudinary.com/dih6gwkau/image/upload/v1728065831/code_rush__hqurgj.jpg",
+        "url": "https://unstop.com/hackathons/techathalon-infotsav24-atal-bihari-vajpayee-indian-institute-of-information-technology-and-management-abv-iii-1152392",
+        "prize": "40k"
+    },
+    {
         "id": 12,
         "name": "Pinnacle",
         "category": "Managerial",
