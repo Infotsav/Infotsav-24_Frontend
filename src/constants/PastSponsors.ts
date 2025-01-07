@@ -33,6 +33,16 @@ import internshala from '../assets/SponsorPage/internshala.png';
 import canaraBank from '../assets/SponsorPage/canaraBank.png';
 import unstop from '../assets/SponsorPage/unstop.png';
 import sbi from '../assets/SponsorPage/SBI.png';
+import easeMyTrip from '../assets/SponsorPage/EaseMyTrip.png';
+import Edukul from '../assets/SponsorPage/Edukul.png';
+import UdupisKitchen from '../assets/SponsorPage/UdupisKitchen.png';
+import Aptos from '../assets/SponsorPage/Aptos.png';
+import HighHeads from '../assets/SponsorPage/HighHeads.png';
+import PizzaHut from '../assets/SponsorPage/PizzaHut.png';
+import Foodiyapa from '../assets/SponsorPage/Foodiyapa.png';
+import HotelGoldInn from '../assets/SponsorPage/HotelGoldInn.png';
+import AggarawalCaterers from '../assets/SponsorPage/AggarawalCaterers.png';
+import ChaiChowk from '../assets/SponsorPage/ChaiChowk.png';
 
 export interface Sponsor {
     name: string;
@@ -90,4 +100,18 @@ export const currentSponsers: currentSponsor[] = [
     { name: 'CanaraBank', src: canaraBank, alt: 'CANARABANK LOGO' },
     { name: 'Unstop', src: unstop, alt: 'UNSTOP LOGO' },
     { name: 'Sbi', src: sbi, alt: 'SBI LOGO' },
+    { name: 'EaseMyTrip', src: easeMyTrip, alt: 'EASEMYTRIP LOGO' },
+    { name: 'Edukul', src: Edukul, alt: 'EDUKUL LOGO' },
+    { name: 'UdupisKitchen', src: UdupisKitchen, alt: 'UDUPISKITCHEN LOGO' },
+    { name: 'Aptos', src: Aptos, alt: 'APTOS LOGO' },
+    { name: 'HighHeads', src: HighHeads, alt: 'HIGHHEADS LOGO' },
+    { name: 'PizzaHut', src: PizzaHut, alt: 'PIZZAHUT LOGO' },
+    { name: 'Foodiyapa', src: Foodiyapa, alt: 'FOODIYAPA LOGO' },
+    { name: 'HotelGoldInn', src: HotelGoldInn, alt: 'HOTELGOLDINN LOGO' },
+    {
+        name: 'AggarawalCaterers',
+        src: AggarawalCaterers,
+        alt: 'AGGARAWALCATERERS LOGO',
+    },
+    { name: 'ChaiChowk', src: ChaiChowk, alt: 'CHAICHOWK LOGO' },
 ];
